@@ -1,0 +1,12 @@
+cff-version: 1.0.0
+message: "If you use this Book, please cite it as below."
+authors:
+  - family-names: Khider
+    given-names: Deborah
+    orcid: https://orcid.org/0000-0001-7501-8430
+    affiliation: University of Southern California
+title: "Coral Sr/Ca Calibration - An example from Dry Tortuga's" 
+url: "https://github.com/khider/dry-tortugas-calibration-fun/tree/info"
+version: v1.0.0
+date-released: 2024-09-06
+
