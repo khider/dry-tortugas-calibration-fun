@@ -1,0 +1,1881 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Calibration of the Sr/Ca paleothermometer: an example from Dry Tortugas &#8212; Coral Sr/Ca Calibration - An Example from Dry Tortugas</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Calibration';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Calibration of the Sr/Ca paleothermometer: A Bayesian approach" href="BayesianCalibration.html" />
+    <link rel="prev" title="Exploring the Dry Tortugas Sr/Ca data" href="DataExploration.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/coral_logo.jpg" class="logo__image only-light" alt="Coral Sr/Ca Calibration - An Example from Dry Tortugas - Home"/>
+    <script>document.write(`<img src="_static/coral_logo.jpg" class="logo__image only-dark" alt="Coral Sr/Ca Calibration - An Example from Dry Tortugas - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Coral Sr/Ca calibration - An example from Dry Tortugas
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="DataExploration.html">Exploring the Dry Tortugas Sr/Ca data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Calibration</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Calibration of the Sr/Ca paleothermometer: an example from Dry Tortugas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BayesianCalibration.html">Calibration of the Sr/Ca paleothermometer: A Bayesian approach</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/khider/dry-tortugas-calibration-fun" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/khider/dry-tortugas-calibration-fun/issues/new?title=Issue%20on%20page%20%2FCalibration.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Calibration.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Calibration of the Sr/Ca paleothermometer: an example from Dry Tortugas</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authors">Authors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble">Preamble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">Loading the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinary-least-square-regression">Ordinary least square regression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#siderastrea-sidera"><em>Siderastrea sidera</em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#core-a1">Core A1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#core-f1">Core F1</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#montastraea-faveolata"><em>Montastraea faveolata</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weighted-least-square-regression">Weighted least square regression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><em>Siderastrea sidera</em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Core A1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Core F1</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><em>Montastraea faveolata</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="calibration-of-the-sr-ca-paleothermometer-an-example-from-dry-tortugas">
+<h1>Calibration of the Sr/Ca paleothermometer: an example from Dry Tortugas<a class="headerlink" href="#calibration-of-the-sr-ca-paleothermometer-an-example-from-dry-tortugas" title="Link to this heading">#</a></h1>
+<section id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://orcid.org/0000-0001-7501-8430">Deborah Khider</a></p>
+</section>
+<section id="preamble">
+<h2>Preamble<a class="headerlink" href="#preamble" title="Link to this heading">#</a></h2>
+<p>A common exercise in paleoclimatology is the calibration of the measured proxy (in this case, coral Sr/Ca) to the environmental parameter that controls it (sea surface temperature). This notebook walks through the calibration of Sr/Ca measurments made on various coral in Dry Tortugas compared to instrumental data using a frequentist approach. Some figures are reproduced from the original study by <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0031018211002501?casa_token=u1x_ZYnm_mIAAAAA:rU7n-8jHh2g5UPgGHs5h1iptBXVa6rfvKFxpOwgMjHgB6g4jUZ9oRppzJz7O5UQHDlc1U3xhYSg">DeLong et al. 2011</a>.</p>
+<p>Let’s import the necessary packages. For the regression work, we will use the <a class="reference external" href="https://www.statsmodels.org/stable/index.html">statsmodel</a> package.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+
+<span class="c1">#To make tables</span>
+<span class="kn">from</span> <span class="nn">great_tables</span> <span class="kn">import</span> <span class="n">GT</span><span class="p">,</span> <span class="n">md</span><span class="p">,</span> <span class="n">html</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="loading-the-data">
+<h2>Loading the data<a class="headerlink" href="#loading-the-data" title="Link to this heading">#</a></h2>
+<p>For this calibration exercise, we will be using the Sr/Ca data from <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0031018211002501?casa_token=u1x_ZYnm_mIAAAAA:rU7n-8jHh2g5UPgGHs5h1iptBXVa6rfvKFxpOwgMjHgB6g4jUZ9oRppzJz7O5UQHDlc1U3xhYSg">DeLong et al. (2011)</a>. The <a class="reference internal" href="DataExploration.html"><span class="std std-doc">previous chapter</span></a> was dedicated to data exploration, so we will directly delve into the calibration work.</p>
+<p>Lets’s import it into our workspace using <a class="reference external" href="https://pandas.pydata.org">pandas</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://www.ncei.noaa.gov/pub/data/paleo/coral/atlantic/tortugas2011.xls&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Mean Sr/Ca (mmol/mol)</th>
+      <th>Number of samples</th>
+      <th>St. error of mean</th>
+      <th>Mean Sr/Ca (mmol/mol).1</th>
+      <th>Number of samples.1</th>
+      <th>St. error of mean.1</th>
+      <th>Mean Sr/Ca (mmol/mol).2</th>
+      <th>Number of samples.2</th>
+      <th>St. error of mean.2</th>
+      <th>DRTO SST (ºC)</th>
+      <th>St. error of mean.3</th>
+      <th>Sand Key SST (ºC)</th>
+      <th>St. error of mean.4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2008.625000</td>
+      <td>8.737095</td>
+      <td>1</td>
+      <td>0.012000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>9.025385</td>
+      <td>3</td>
+      <td>0.003027</td>
+      <td>30.193011</td>
+      <td>0.010330</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2008.541667</td>
+      <td>8.770223</td>
+      <td>2</td>
+      <td>0.003228</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>9.051444</td>
+      <td>3</td>
+      <td>0.010060</td>
+      <td>29.551197</td>
+      <td>0.010570</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2008.458333</td>
+      <td>8.841024</td>
+      <td>2</td>
+      <td>0.003956</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>9.111843</td>
+      <td>3</td>
+      <td>0.000554</td>
+      <td>28.539499</td>
+      <td>0.022829</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2008.375000</td>
+      <td>8.940933</td>
+      <td>2</td>
+      <td>0.001614</td>
+      <td>8.972382</td>
+      <td>1.0</td>
+      <td>0.01</td>
+      <td>9.190204</td>
+      <td>3</td>
+      <td>0.021459</td>
+      <td>26.642473</td>
+      <td>0.026493</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2008.291667</td>
+      <td>9.022715</td>
+      <td>2</td>
+      <td>0.003125</td>
+      <td>9.062088</td>
+      <td>1.0</td>
+      <td>0.01</td>
+      <td>9.232626</td>
+      <td>3</td>
+      <td>0.010278</td>
+      <td>24.905000</td>
+      <td>0.019899</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>In the <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0031018211002501?casa_token=u1x_ZYnm_mIAAAAA:rU7n-8jHh2g5UPgGHs5h1iptBXVa6rfvKFxpOwgMjHgB6g4jUZ9oRppzJz7O5UQHDlc1U3xhYSg">original study</a>, Delong et al. chose a weighted linear regression over an ordinary least square regression to take into account the uncertainty in the data. Here, let’s try both and compare the results.</p>
+</section>
+<section id="ordinary-least-square-regression">
+<h2>Ordinary least square regression<a class="headerlink" href="#ordinary-least-square-regression" title="Link to this heading">#</a></h2>
+<section id="siderastrea-sidera">
+<h3><em>Siderastrea sidera</em><a class="headerlink" href="#siderastrea-sidera" title="Link to this heading">#</a></h3>
+<p>Let’s start with the calibration for <em>Siderastrea sidera</em>, using one core at a time as per the original study.</p>
+<section id="core-a1">
+<h4>Core A1<a class="headerlink" href="#core-a1" title="Link to this heading">#</a></h4>
+<p>Let’s start with the calibration to the DRTO SST data. But first, let’s remove NaNs:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cleaned_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Mean Sr/Ca (mmol/mol)&#39;</span><span class="p">,</span><span class="s1">&#39;DRTO SST (ºC)&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="n">ols</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">X</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">ols</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1">#get the parameters</span>
+<span class="n">intercept</span><span class="p">,</span> <span class="n">slope</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span>
+
+<span class="c1">#get the standard error</span>
+<span class="n">intercept_se</span><span class="p">,</span> <span class="n">slope_se</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">bse</span>
+
+<span class="c1">#R_squared</span>
+<span class="n">r_squared</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">rsquared</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R_squared:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r_squared</span><span class="w"> </span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intercept: 10.004
+Slope: -0.040
+Intercept Standard Error: 0.024
+Slope Standard Error: 0.001
+R_squared: 0.95
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s keep these results in a series of list that we will update as we go:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coral_id</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A1 (S.Sidera)&#39;</span><span class="p">]</span>
+<span class="n">SST_p</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;DRTO&#39;</span><span class="p">]</span>
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="n">slope</span><span class="p">]</span>
+<span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="n">intercept</span><span class="p">]</span>
+<span class="n">m_se</span> <span class="o">=</span> <span class="p">[</span><span class="n">slope_se</span><span class="p">]</span>
+<span class="n">p_se</span> <span class="o">=</span> <span class="p">[</span><span class="n">intercept_se</span><span class="p">]</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="p">[</span><span class="n">r_squared</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s repeat the calculation with the Sand Key SST data:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cleaned_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Mean Sr/Ca (mmol/mol)&#39;</span><span class="p">,</span><span class="s1">&#39;Sand Key SST (ºC)&#39;</span><span class="p">])</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">12</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="n">ols</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">X</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">ols</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1">#get the parameters</span>
+<span class="n">intercept</span><span class="p">,</span> <span class="n">slope</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span>
+
+<span class="c1">#get the standard error</span>
+<span class="n">intercept_se</span><span class="p">,</span> <span class="n">slope_se</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">bse</span>
+<span class="c1">#R_squared</span>
+<span class="n">r_squared</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">rsquared</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R_squared:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r_squared</span><span class="w"> </span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intercept: 10.115
+Slope: -0.043
+Intercept Standard Error: 0.025
+Slope Standard Error: 0.001
+R_squared: 0.93
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s update our results list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coral_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;A1 (S.Sidera)&#39;</span><span class="p">)</span>
+<span class="n">SST_p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;SANF1&#39;</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept</span><span class="p">)</span>
+<span class="n">m_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope_se</span><span class="p">)</span>
+<span class="n">p_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept_se</span><span class="p">)</span>
+<span class="n">r2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r_squared</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="core-f1">
+<h4>Core F1<a class="headerlink" href="#core-f1" title="Link to this heading">#</a></h4>
+<p>Let’s proceed with the DRTO SST Data:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cleaned_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Mean Sr/Ca (mmol/mol).1&#39;</span><span class="p">,</span><span class="s1">&#39;DRTO SST (ºC)&#39;</span><span class="p">])</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="n">ols</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">X</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">ols</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1">#get the parameters</span>
+<span class="n">intercept</span><span class="p">,</span> <span class="n">slope</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span>
+
+<span class="c1">#get the standard error</span>
+<span class="n">intercept_se</span><span class="p">,</span> <span class="n">slope_se</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">bse</span>
+<span class="c1">#R_squared</span>
+<span class="n">r_squared</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">rsquared</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R_squared:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r_squared</span><span class="w"> </span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intercept: 10.083
+Slope: -0.042
+Intercept Standard Error: 0.025
+Slope Standard Error: 0.001
+R_squared: 0.95
+</pre></div>
+</div>
+</div>
+</div>
+<p>And let’s save our results:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coral_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;F1 (S.Sidera)&#39;</span><span class="p">)</span>
+<span class="n">SST_p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;DRTO&#39;</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept</span><span class="p">)</span>
+<span class="n">m_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope_se</span><span class="p">)</span>
+<span class="n">p_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept_se</span><span class="p">)</span>
+<span class="n">r2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r_squared</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s do the regression agaisnt Sand Key SST data:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cleaned_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Mean Sr/Ca (mmol/mol).1&#39;</span><span class="p">,</span><span class="s1">&#39;Sand Key SST (ºC)&#39;</span><span class="p">])</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">12</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="n">ols</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">X</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">ols</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1">#get the parameters</span>
+<span class="n">intercept</span><span class="p">,</span> <span class="n">slope</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span>
+
+<span class="c1">#get the standard error</span>
+<span class="n">intercept_se</span><span class="p">,</span> <span class="n">slope_se</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">bse</span>
+
+<span class="c1">#R_squared</span>
+<span class="n">r_squared</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">rsquared</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R_squared:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r_squared</span><span class="w"> </span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intercept: 10.221
+Slope: -0.046
+Intercept Standard Error: 0.027
+Slope Standard Error: 0.001
+R_squared: 0.93
+</pre></div>
+</div>
+</div>
+</div>
+<p>And let’s save the results:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coral_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;F1 (S.Sidera)&#39;</span><span class="p">)</span>
+<span class="n">SST_p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;SANF1&#39;</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept</span><span class="p">)</span>
+<span class="n">m_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope_se</span><span class="p">)</span>
+<span class="n">p_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept_se</span><span class="p">)</span>
+<span class="n">r2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r_squared</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="montastraea-faveolata">
+<h3><em>Montastraea faveolata</em><a class="headerlink" href="#montastraea-faveolata" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cleaned_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Mean Sr/Ca (mmol/mol).2&#39;</span><span class="p">,</span><span class="s1">&#39;DRTO SST (ºC)&#39;</span><span class="p">])</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="n">ols</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">X</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">ols</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1">#get the parameters</span>
+<span class="n">intercept</span><span class="p">,</span> <span class="n">slope</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span>
+
+<span class="c1">#get the standard error</span>
+<span class="n">intercept_se</span><span class="p">,</span> <span class="n">slope_se</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">bse</span>
+
+<span class="c1">#R_squared</span>
+<span class="n">r_squared</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">rsquared</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R_squared:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r_squared</span><span class="w"> </span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intercept: 9.955
+Slope: -0.029
+Intercept Standard Error: 0.028
+Slope Standard Error: 0.001
+R_squared: 0.87
+</pre></div>
+</div>
+</div>
+</div>
+<p>And let’s save the results:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coral_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;B3 (M. faveolata)&#39;</span><span class="p">)</span>
+<span class="n">SST_p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;DRTO&#39;</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept</span><span class="p">)</span>
+<span class="n">m_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope_se</span><span class="p">)</span>
+<span class="n">p_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept_se</span><span class="p">)</span>
+<span class="n">r2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r_squared</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s do the same with the Sand Key SST:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cleaned_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Mean Sr/Ca (mmol/mol).2&#39;</span><span class="p">,</span><span class="s1">&#39;Sand Key SST (ºC)&#39;</span><span class="p">])</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">12</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="n">ols</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">X</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">ols</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1">#get the parameters</span>
+<span class="n">intercept</span><span class="p">,</span> <span class="n">slope</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span>
+
+<span class="c1">#get the standard error</span>
+<span class="n">intercept_se</span><span class="p">,</span> <span class="n">slope_se</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">bse</span>
+
+<span class="c1">#R_squared</span>
+<span class="n">r_squared</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">rsquared</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R_squared:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r_squared</span><span class="w"> </span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intercept: 10.031
+Slope: -0.031
+Intercept Standard Error: 0.027
+Slope Standard Error: 0.001
+R_squared: 0.85
+</pre></div>
+</div>
+</div>
+</div>
+<p>And let’s save the results:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coral_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;B3 (M. faveolata)&#39;</span><span class="p">)</span>
+<span class="n">SST_p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;SANF1&#39;</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept</span><span class="p">)</span>
+<span class="n">m_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope_se</span><span class="p">)</span>
+<span class="n">p_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept_se</span><span class="p">)</span>
+<span class="n">r2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r_squared</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
+<p>Let’s summarize our results into a table. Although Pandas DataFrames can represent data in a tabular format and are extremely useful for computation, they are not always easy to read. Here, we will be using <a class="reference external" href="https://posit-dev.github.io/great-tables/articles/intro.html">Great Tables</a> to present the results in a publication-ready table.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ols_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Coral ID&#39;</span><span class="p">:</span><span class="n">coral_id</span><span class="p">,</span>
+                      <span class="s1">&#39;SST&#39;</span><span class="p">:</span><span class="n">SST_p</span><span class="p">,</span>
+                      <span class="s1">&#39;Slope&#39;</span><span class="p">:</span><span class="n">m</span><span class="p">,</span>
+                      <span class="s1">&#39;Slope SE$^a$&#39;</span><span class="p">:</span><span class="n">m_se</span><span class="p">,</span>
+                      <span class="s1">&#39;Intercept&#39;</span><span class="p">:</span><span class="n">p</span><span class="p">,</span>
+                      <span class="s1">&#39;Intercept SE$^a$&#39;</span><span class="p">:</span><span class="n">p_se</span><span class="p">,</span>
+                      <span class="s1">&#39;R$^2$&#39;</span><span class="p">:</span><span class="n">r2</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#from great_tables.data import islands</span>
+
+<span class="n">gt_tbl</span> <span class="o">=</span> <span class="p">(</span><span class="n">GT</span><span class="p">(</span><span class="n">ols_df</span><span class="p">)</span>
+          <span class="o">.</span><span class="n">tab_header</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Calibration of coral Sr/Ca to SST, Ordinary Least Square&#39;</span><span class="p">)</span>
+          <span class="o">.</span><span class="n">fmt_number</span><span class="p">([</span><span class="s1">&#39;Slope&#39;</span><span class="p">,</span><span class="s1">&#39;Slope SE$^a$&#39;</span><span class="p">,</span><span class="s1">&#39;Intercept&#39;</span><span class="p">,</span><span class="s1">&#39;Intercept SE$^a$&#39;</span><span class="p">],</span> <span class="n">decimals</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+          <span class="o">.</span><span class="n">fmt_number</span><span class="p">(</span><span class="s1">&#39;R$^2$&#39;</span><span class="p">,</span><span class="n">decimals</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+         <span class="o">.</span><span class="n">tab_source_note</span><span class="p">(</span><span class="n">source_note</span> <span class="o">=</span> <span class="s2">&quot;$^a$ SE: standard error&quot;</span><span class="p">)</span>
+          <span class="o">.</span><span class="n">tab_options</span><span class="p">(</span><span class="n">column_labels_background_color</span><span class="o">=</span><span class="s2">&quot;darkgrey&quot;</span><span class="p">,</span><span class="n">source_notes_background_color</span><span class="o">=</span><span class="s2">&quot;OldLace&quot;</span><span class="p">)</span>
+         <span class="p">)</span>  
+
+<span class="n">gt_tbl</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div id="cwaddrpnoq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>
+#cwaddrpnoq table {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+#cwaddrpnoq thead, tbody, tfoot, tr, td, th { border-style: none; }
+ tr { background-color: transparent; }
+#cwaddrpnoq p { margin: 0; padding: 0; }
+ #cwaddrpnoq .gt_table { display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; }
+ #cwaddrpnoq .gt_caption { padding-top: 4px; padding-bottom: 4px; }
+ #cwaddrpnoq .gt_title { color: #333333; font-size: 125%; font-weight: initial; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; border-bottom-color: #FFFFFF; border-bottom-width: 0; }
+ #cwaddrpnoq .gt_subtitle { color: #333333; font-size: 85%; font-weight: initial; padding-top: 3px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; border-top-color: #FFFFFF; border-top-width: 0; }
+ #cwaddrpnoq .gt_heading { background-color: #FFFFFF; text-align: center; border-bottom-color: #FFFFFF; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
+ #cwaddrpnoq .gt_bottom_border { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
+ #cwaddrpnoq .gt_col_headings { border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
+ #cwaddrpnoq .gt_col_heading { color: #333333; background-color: darkgrey; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; }
+ #cwaddrpnoq .gt_column_spanner_outer { color: #333333; background-color: darkgrey; font-size: 100%; font-weight: normal; text-transform: inherit; padding-top: 0; padding-bottom: 0; padding-left: 4px; padding-right: 4px; }
+ #cwaddrpnoq .gt_column_spanner_outer:first-child { padding-left: 0; }
+ #cwaddrpnoq .gt_column_spanner_outer:last-child { padding-right: 0; }
+ #cwaddrpnoq .gt_column_spanner { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 5px; overflow-x: hidden; display: inline-block; width: 100%; }
+ #cwaddrpnoq .gt_spanner_row { border-bottom-style: hidden; }
+ #cwaddrpnoq .gt_group_heading { padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; text-align: left; }
+ #cwaddrpnoq .gt_empty_group_heading { padding: 0.5px; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; vertical-align: middle; }
+ #cwaddrpnoq .gt_from_md> :first-child { margin-top: 0; }
+ #cwaddrpnoq .gt_from_md> :last-child { margin-bottom: 0; }
+ #cwaddrpnoq .gt_row { padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; }
+ #cwaddrpnoq .gt_stub { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; }
+ #cwaddrpnoq .gt_stub_row_group { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; vertical-align: top; }
+ #cwaddrpnoq .gt_row_group_first td { border-top-width: 2px; }
+ #cwaddrpnoq .gt_row_group_first th { border-top-width: 2px; }
+ #cwaddrpnoq .gt_table_body { border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
+ #cwaddrpnoq .gt_sourcenotes { color: #333333; background-color: OldLace; border-bottom-style: none; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; }
+ #cwaddrpnoq .gt_sourcenote { font-size: 90%; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; text-align: left; }
+ #cwaddrpnoq .gt_left { text-align: left; }
+ #cwaddrpnoq .gt_center { text-align: center; }
+ #cwaddrpnoq .gt_right { text-align: right; font-variant-numeric: tabular-nums; }
+ #cwaddrpnoq .gt_font_normal { font-weight: normal; }
+ #cwaddrpnoq .gt_font_bold { font-weight: bold; }
+ #cwaddrpnoq .gt_font_italic { font-style: italic; }
+ #cwaddrpnoq .gt_super { font-size: 65%; }
+ #cwaddrpnoq .gt_footnote_marks { font-size: 75%; vertical-align: 0.4em; position: initial; }
+ #cwaddrpnoq .gt_asterisk { font-size: 100%; vertical-align: 0; }
+ 
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead class="gt_header">
+  <tr>
+    <th colspan="7" class="gt_heading gt_title gt_font_normal">Calibration of coral Sr/Ca to SST, Ordinary Least Square</th>
+  </tr>
+</thead>
+<tr class="gt_col_headings">
+  <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Coral ID">Coral ID</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="SST">SST</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Slope">Slope</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Slope SE$^a$">Slope SE$^a$</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Intercept">Intercept</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Intercept SE$^a$">Intercept SE$^a$</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="R$^2$">R$^2$</th>
+</tr>
+<tbody class="gt_table_body">
+  <tr>
+    <td class="gt_row gt_left">A1 (S.Sidera)</td>
+    <td class="gt_row gt_left">DRTO</td>
+    <td class="gt_row gt_right">−0.040</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">10.004</td>
+    <td class="gt_row gt_right">0.024</td>
+    <td class="gt_row gt_right">0.95</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_left">A1 (S.Sidera)</td>
+    <td class="gt_row gt_left">SANF1</td>
+    <td class="gt_row gt_right">−0.043</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">10.115</td>
+    <td class="gt_row gt_right">0.025</td>
+    <td class="gt_row gt_right">0.93</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_left">F1 (S.Sidera)</td>
+    <td class="gt_row gt_left">DRTO</td>
+    <td class="gt_row gt_right">−0.042</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">10.083</td>
+    <td class="gt_row gt_right">0.025</td>
+    <td class="gt_row gt_right">0.95</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_left">F1 (S.Sidera)</td>
+    <td class="gt_row gt_left">SANF1</td>
+    <td class="gt_row gt_right">−0.046</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">10.221</td>
+    <td class="gt_row gt_right">0.027</td>
+    <td class="gt_row gt_right">0.93</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_left">B3 (M. faveolata)</td>
+    <td class="gt_row gt_left">DRTO</td>
+    <td class="gt_row gt_right">−0.029</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">9.955</td>
+    <td class="gt_row gt_right">0.028</td>
+    <td class="gt_row gt_right">0.87</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_left">B3 (M. faveolata)</td>
+    <td class="gt_row gt_left">SANF1</td>
+    <td class="gt_row gt_right">−0.031</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">10.031</td>
+    <td class="gt_row gt_right">0.027</td>
+    <td class="gt_row gt_right">0.85</td>
+  </tr>
+</tbody>
+  <tfoot class="gt_sourcenotes">
+  
+  <tr>
+    <td class="gt_sourcenote" colspan="7">$^a$ SE: standard error</td>
+  </tr>
+
+</tfoot>
+
+</table>
+
+</div>
+        </div></div>
+</div>
+<p>The calibration equations for <em>S. sidera</em> are vert similar between the two cores and SST products, which is not surprising given the good agreement among these datasets. The calibration slope of <em>M.faveolata</em> is lower, suggesting separate calibrations would be needed for these two species if used as paleothermometers.</p>
+</section>
+</section>
+<section id="weighted-least-square-regression">
+<h2>Weighted least square regression<a class="headerlink" href="#weighted-least-square-regression" title="Link to this heading">#</a></h2>
+<p>Following the original approach in Delong et al., let’s use a weighted least square regression. The method of ordinary least squares, which we used previously, assumes that there is constant variance in the errors. The method of weighted least squares can be used when the ordinary least squares assumption of constant variance in the errors is violated, which is the case here. The weights applied to the regression are inversely proportional to the error variance and reflects the information we have about each observation. Here, we will take into consideration the error in both the Sr/Ca measurements (estimated as repeated measurements on the same sample) and SST:</p>
+<div class="math notranslate nohighlight">
+\[
+  w_i = \frac{1}{\sigma^{2}_{i,Sr/Ca} + \sigma^{2}_{i,SST}}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\sigma\)</span> represents the standard error on the Sr/Ca measurements and SST</p>
+<section id="id1">
+<h3><em>Siderastrea sidera</em><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Let’s start with the calibration for <em>Siderastrea sidera</em>, using one core at a time as per the original study.</p>
+<section id="id2">
+<h4>Core A1<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<p>Let’s start with the calibration to the DRTO SST data. But first, let’s remove NaNs:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cleaned_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Mean Sr/Ca (mmol/mol)&#39;</span><span class="p">,</span><span class="s1">&#39;DRTO SST (ºC)&#39;</span><span class="p">])</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">3</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">11</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">wls</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">WLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">X</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">wls</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1">#get the parameters</span>
+<span class="n">intercept</span><span class="p">,</span> <span class="n">slope</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span>
+
+<span class="c1">#get the standard error</span>
+<span class="n">intercept_se</span><span class="p">,</span> <span class="n">slope_se</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">bse</span>
+
+<span class="c1">#R_squared</span>
+<span class="n">r_squared</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">rsquared</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R_squared:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r_squared</span><span class="w"> </span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intercept: 10.043
+Slope: -0.041
+Intercept Standard Error: 0.023
+Slope Standard Error: 0.001
+R_squared: 0.95
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s save the results:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coral_id</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A1 (S.Sidera)&#39;</span><span class="p">]</span>
+<span class="n">SST_p</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;DRTO&#39;</span><span class="p">]</span>
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="n">slope</span><span class="p">]</span>
+<span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="n">intercept</span><span class="p">]</span>
+<span class="n">m_se</span> <span class="o">=</span> <span class="p">[</span><span class="n">slope_se</span><span class="p">]</span>
+<span class="n">p_se</span> <span class="o">=</span> <span class="p">[</span><span class="n">intercept_se</span><span class="p">]</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="p">[</span><span class="n">r_squared</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>And let’s regress against Sand Key SST:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cleaned_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Mean Sr/Ca (mmol/mol)&#39;</span><span class="p">,</span><span class="s1">&#39;Sand Key SST (ºC)&#39;</span><span class="p">])</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">12</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">3</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">13</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">wls</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">WLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">X</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">wls</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1">#get the parameters</span>
+<span class="n">intercept</span><span class="p">,</span> <span class="n">slope</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span>
+
+<span class="c1">#get the standard error</span>
+<span class="n">intercept_se</span><span class="p">,</span> <span class="n">slope_se</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">bse</span>
+<span class="c1">#R_squared</span>
+<span class="n">r_squared</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">rsquared</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R_squared:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r_squared</span><span class="w"> </span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intercept: 10.124
+Slope: -0.044
+Intercept Standard Error: 0.028
+Slope Standard Error: 0.001
+R_squared: 0.92
+</pre></div>
+</div>
+</div>
+</div>
+<p>And let’s save the results:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coral_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;A1 (S.Sidera)&#39;</span><span class="p">)</span>
+<span class="n">SST_p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;SANF1&#39;</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept</span><span class="p">)</span>
+<span class="n">m_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope_se</span><span class="p">)</span>
+<span class="n">p_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept_se</span><span class="p">)</span>
+<span class="n">r2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r_squared</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h4>Core F1<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cleaned_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Mean Sr/Ca (mmol/mol).1&#39;</span><span class="p">,</span><span class="s1">&#39;DRTO SST (ºC)&#39;</span><span class="p">])</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">6</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">11</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">wls</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">WLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">wls</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1">#get the parameters</span>
+<span class="n">intercept</span><span class="p">,</span> <span class="n">slope</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span>
+
+<span class="c1">#get the standard error</span>
+<span class="n">intercept_se</span><span class="p">,</span> <span class="n">slope_se</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">bse</span>
+<span class="c1">#R_squared</span>
+<span class="n">r_squared</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">rsquared</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R_squared:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r_squared</span><span class="w"> </span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intercept: 10.091
+Slope: -0.042
+Intercept Standard Error: 0.026
+Slope Standard Error: 0.001
+R_squared: 0.95
+</pre></div>
+</div>
+</div>
+</div>
+<p>And let’s append our results!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coral_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;F1 (S.Sidera)&#39;</span><span class="p">)</span>
+<span class="n">SST_p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;DRTO&#39;</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept</span><span class="p">)</span>
+<span class="n">m_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope_se</span><span class="p">)</span>
+<span class="n">p_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept_se</span><span class="p">)</span>
+<span class="n">r2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r_squared</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s move on to Sand Key SST!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cleaned_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Mean Sr/Ca (mmol/mol).1&#39;</span><span class="p">,</span><span class="s1">&#39;Sand Key SST (ºC)&#39;</span><span class="p">])</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">12</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">6</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">13</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">wls</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">WLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">X</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">wls</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1">#get the parameters</span>
+<span class="n">intercept</span><span class="p">,</span> <span class="n">slope</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span>
+
+<span class="c1">#get the standard error</span>
+<span class="n">intercept_se</span><span class="p">,</span> <span class="n">slope_se</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">bse</span>
+
+<span class="c1">#R_squared</span>
+<span class="n">r_squared</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">rsquared</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R_squared:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r_squared</span><span class="w"> </span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intercept: 10.219
+Slope: -0.046
+Intercept Standard Error: 0.029
+Slope Standard Error: 0.001
+R_squared: 0.92
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s append to the results!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coral_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;F1 (S.Sidera)&#39;</span><span class="p">)</span>
+<span class="n">SST_p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;SANF1&#39;</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept</span><span class="p">)</span>
+<span class="n">m_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope_se</span><span class="p">)</span>
+<span class="n">p_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept_se</span><span class="p">)</span>
+<span class="n">r2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r_squared</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id4">
+<h3><em>Montastraea faveolata</em><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cleaned_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Mean Sr/Ca (mmol/mol).2&#39;</span><span class="p">,</span><span class="s1">&#39;DRTO SST (ºC)&#39;</span><span class="p">])</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">9</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">11</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">wls</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">WLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">X</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">wls</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1">#get the parameters</span>
+<span class="n">intercept</span><span class="p">,</span> <span class="n">slope</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span>
+
+<span class="c1">#get the standard error</span>
+<span class="n">intercept_se</span><span class="p">,</span> <span class="n">slope_se</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">bse</span>
+
+<span class="c1">#R_squared</span>
+<span class="n">r_squared</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">rsquared</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R_squared:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r_squared</span><span class="w"> </span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intercept: 9.956
+Slope: -0.029
+Intercept Standard Error: 0.030
+Slope Standard Error: 0.001
+R_squared: 0.86
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s append the results to the list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coral_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;B3 (M. faveolata)&#39;</span><span class="p">)</span>
+<span class="n">SST_p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;DRTO&#39;</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept</span><span class="p">)</span>
+<span class="n">m_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope_se</span><span class="p">)</span>
+<span class="n">p_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept_se</span><span class="p">)</span>
+<span class="n">r2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r_squared</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, let’s do the regression against Sand Key SST data:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cleaned_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Mean Sr/Ca (mmol/mol).2&#39;</span><span class="p">,</span><span class="s1">&#39;Sand Key SST (ºC)&#39;</span><span class="p">])</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">12</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">9</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">13</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">wls</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">WLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">X</span><span class="p">,</span> <span class="n">weights</span> <span class="o">=</span>  <span class="n">weights</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">wls</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1">#get the parameters</span>
+<span class="n">intercept</span><span class="p">,</span> <span class="n">slope</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span>
+
+<span class="c1">#get the standard error</span>
+<span class="n">intercept_se</span><span class="p">,</span> <span class="n">slope_se</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">bse</span>
+
+<span class="c1">#R_squared</span>
+<span class="n">r_squared</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">rsquared</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intercept_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope Standard Error:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slope_se</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R_squared:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r_squared</span><span class="w"> </span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intercept: 10.047
+Slope: -0.032
+Intercept Standard Error: 0.030
+Slope Standard Error: 0.001
+R_squared: 0.84
+</pre></div>
+</div>
+</div>
+</div>
+<p>And append the results!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coral_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;B3 (M. faveolata)&#39;</span><span class="p">)</span>
+<span class="n">SST_p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;SANF1&#39;</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept</span><span class="p">)</span>
+<span class="n">m_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope_se</span><span class="p">)</span>
+<span class="n">p_se</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intercept_se</span><span class="p">)</span>
+<span class="n">r2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r_squared</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id5">
+<h3>Summary<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Let’s summarize our results into a table as we have done for the ordinary least square:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wls_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Coral ID&#39;</span><span class="p">:</span><span class="n">coral_id</span><span class="p">,</span>
+                      <span class="s1">&#39;SST&#39;</span><span class="p">:</span><span class="n">SST_p</span><span class="p">,</span>
+                      <span class="s1">&#39;Slope&#39;</span><span class="p">:</span><span class="n">m</span><span class="p">,</span>
+                      <span class="s1">&#39;Slope SE$^a$&#39;</span><span class="p">:</span><span class="n">m_se</span><span class="p">,</span>
+                      <span class="s1">&#39;Intercept&#39;</span><span class="p">:</span><span class="n">p</span><span class="p">,</span>
+                      <span class="s1">&#39;Intercept SE$^a$&#39;</span><span class="p">:</span><span class="n">p_se</span><span class="p">,</span>
+                      <span class="s1">&#39;R$^2$&#39;</span><span class="p">:</span><span class="n">r2</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gt_tbl_wls</span> <span class="o">=</span> <span class="p">(</span><span class="n">GT</span><span class="p">(</span><span class="n">wls_df</span><span class="p">)</span>
+          <span class="o">.</span><span class="n">tab_header</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Calibration of coral Sr/Ca to SST, Weighted Least Square&#39;</span><span class="p">)</span>
+          <span class="o">.</span><span class="n">fmt_number</span><span class="p">([</span><span class="s1">&#39;Slope&#39;</span><span class="p">,</span><span class="s1">&#39;Slope SE$^a$&#39;</span><span class="p">,</span><span class="s1">&#39;Intercept&#39;</span><span class="p">,</span><span class="s1">&#39;Intercept SE$^a$&#39;</span><span class="p">],</span> <span class="n">decimals</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+          <span class="o">.</span><span class="n">fmt_number</span><span class="p">(</span><span class="s1">&#39;R$^2$&#39;</span><span class="p">,</span><span class="n">decimals</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+         <span class="o">.</span><span class="n">tab_source_note</span><span class="p">(</span><span class="n">source_note</span> <span class="o">=</span> <span class="s2">&quot;$^a$ SE: standard error&quot;</span><span class="p">)</span>
+          <span class="o">.</span><span class="n">tab_options</span><span class="p">(</span><span class="n">column_labels_background_color</span><span class="o">=</span><span class="s2">&quot;darkgrey&quot;</span><span class="p">,</span><span class="n">source_notes_background_color</span><span class="o">=</span><span class="s2">&quot;OldLace&quot;</span><span class="p">)</span>
+         <span class="p">)</span>  
+
+<span class="n">gt_tbl_wls</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div id="ddhpcoazpt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>
+#ddhpcoazpt table {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+#ddhpcoazpt thead, tbody, tfoot, tr, td, th { border-style: none; }
+ tr { background-color: transparent; }
+#ddhpcoazpt p { margin: 0; padding: 0; }
+ #ddhpcoazpt .gt_table { display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; }
+ #ddhpcoazpt .gt_caption { padding-top: 4px; padding-bottom: 4px; }
+ #ddhpcoazpt .gt_title { color: #333333; font-size: 125%; font-weight: initial; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; border-bottom-color: #FFFFFF; border-bottom-width: 0; }
+ #ddhpcoazpt .gt_subtitle { color: #333333; font-size: 85%; font-weight: initial; padding-top: 3px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; border-top-color: #FFFFFF; border-top-width: 0; }
+ #ddhpcoazpt .gt_heading { background-color: #FFFFFF; text-align: center; border-bottom-color: #FFFFFF; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
+ #ddhpcoazpt .gt_bottom_border { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
+ #ddhpcoazpt .gt_col_headings { border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
+ #ddhpcoazpt .gt_col_heading { color: #333333; background-color: darkgrey; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; }
+ #ddhpcoazpt .gt_column_spanner_outer { color: #333333; background-color: darkgrey; font-size: 100%; font-weight: normal; text-transform: inherit; padding-top: 0; padding-bottom: 0; padding-left: 4px; padding-right: 4px; }
+ #ddhpcoazpt .gt_column_spanner_outer:first-child { padding-left: 0; }
+ #ddhpcoazpt .gt_column_spanner_outer:last-child { padding-right: 0; }
+ #ddhpcoazpt .gt_column_spanner { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 5px; overflow-x: hidden; display: inline-block; width: 100%; }
+ #ddhpcoazpt .gt_spanner_row { border-bottom-style: hidden; }
+ #ddhpcoazpt .gt_group_heading { padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; text-align: left; }
+ #ddhpcoazpt .gt_empty_group_heading { padding: 0.5px; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; vertical-align: middle; }
+ #ddhpcoazpt .gt_from_md> :first-child { margin-top: 0; }
+ #ddhpcoazpt .gt_from_md> :last-child { margin-bottom: 0; }
+ #ddhpcoazpt .gt_row { padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; }
+ #ddhpcoazpt .gt_stub { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; }
+ #ddhpcoazpt .gt_stub_row_group { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; vertical-align: top; }
+ #ddhpcoazpt .gt_row_group_first td { border-top-width: 2px; }
+ #ddhpcoazpt .gt_row_group_first th { border-top-width: 2px; }
+ #ddhpcoazpt .gt_table_body { border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
+ #ddhpcoazpt .gt_sourcenotes { color: #333333; background-color: OldLace; border-bottom-style: none; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; }
+ #ddhpcoazpt .gt_sourcenote { font-size: 90%; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; text-align: left; }
+ #ddhpcoazpt .gt_left { text-align: left; }
+ #ddhpcoazpt .gt_center { text-align: center; }
+ #ddhpcoazpt .gt_right { text-align: right; font-variant-numeric: tabular-nums; }
+ #ddhpcoazpt .gt_font_normal { font-weight: normal; }
+ #ddhpcoazpt .gt_font_bold { font-weight: bold; }
+ #ddhpcoazpt .gt_font_italic { font-style: italic; }
+ #ddhpcoazpt .gt_super { font-size: 65%; }
+ #ddhpcoazpt .gt_footnote_marks { font-size: 75%; vertical-align: 0.4em; position: initial; }
+ #ddhpcoazpt .gt_asterisk { font-size: 100%; vertical-align: 0; }
+ 
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead class="gt_header">
+  <tr>
+    <th colspan="7" class="gt_heading gt_title gt_font_normal">Calibration of coral Sr/Ca to SST, Weighted Least Square</th>
+  </tr>
+</thead>
+<tr class="gt_col_headings">
+  <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Coral ID">Coral ID</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="SST">SST</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Slope">Slope</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Slope SE$^a$">Slope SE$^a$</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Intercept">Intercept</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Intercept SE$^a$">Intercept SE$^a$</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="R$^2$">R$^2$</th>
+</tr>
+<tbody class="gt_table_body">
+  <tr>
+    <td class="gt_row gt_left">A1 (S.Sidera)</td>
+    <td class="gt_row gt_left">DRTO</td>
+    <td class="gt_row gt_right">−0.041</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">10.043</td>
+    <td class="gt_row gt_right">0.023</td>
+    <td class="gt_row gt_right">0.95</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_left">A1 (S.Sidera)</td>
+    <td class="gt_row gt_left">SANF1</td>
+    <td class="gt_row gt_right">−0.044</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">10.124</td>
+    <td class="gt_row gt_right">0.028</td>
+    <td class="gt_row gt_right">0.92</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_left">F1 (S.Sidera)</td>
+    <td class="gt_row gt_left">DRTO</td>
+    <td class="gt_row gt_right">−0.042</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">10.091</td>
+    <td class="gt_row gt_right">0.026</td>
+    <td class="gt_row gt_right">0.95</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_left">F1 (S.Sidera)</td>
+    <td class="gt_row gt_left">SANF1</td>
+    <td class="gt_row gt_right">−0.046</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">10.219</td>
+    <td class="gt_row gt_right">0.029</td>
+    <td class="gt_row gt_right">0.92</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_left">B3 (M. faveolata)</td>
+    <td class="gt_row gt_left">DRTO</td>
+    <td class="gt_row gt_right">−0.029</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">9.956</td>
+    <td class="gt_row gt_right">0.030</td>
+    <td class="gt_row gt_right">0.86</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_left">B3 (M. faveolata)</td>
+    <td class="gt_row gt_left">SANF1</td>
+    <td class="gt_row gt_right">−0.032</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">10.047</td>
+    <td class="gt_row gt_right">0.030</td>
+    <td class="gt_row gt_right">0.84</td>
+  </tr>
+</tbody>
+  <tfoot class="gt_sourcenotes">
+  
+  <tr>
+    <td class="gt_sourcenote" colspan="7">$^a$ SE: standard error</td>
+  </tr>
+
+</tfoot>
+
+</table>
+
+</div>
+        </div></div>
+</div>
+<p>For easy comparsion, let’s bring back the ordinary least square results:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gt_tbl</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div id="tqilfqxvlv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>
+#tqilfqxvlv table {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+#tqilfqxvlv thead, tbody, tfoot, tr, td, th { border-style: none; }
+ tr { background-color: transparent; }
+#tqilfqxvlv p { margin: 0; padding: 0; }
+ #tqilfqxvlv .gt_table { display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; }
+ #tqilfqxvlv .gt_caption { padding-top: 4px; padding-bottom: 4px; }
+ #tqilfqxvlv .gt_title { color: #333333; font-size: 125%; font-weight: initial; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; border-bottom-color: #FFFFFF; border-bottom-width: 0; }
+ #tqilfqxvlv .gt_subtitle { color: #333333; font-size: 85%; font-weight: initial; padding-top: 3px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; border-top-color: #FFFFFF; border-top-width: 0; }
+ #tqilfqxvlv .gt_heading { background-color: #FFFFFF; text-align: center; border-bottom-color: #FFFFFF; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
+ #tqilfqxvlv .gt_bottom_border { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
+ #tqilfqxvlv .gt_col_headings { border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
+ #tqilfqxvlv .gt_col_heading { color: #333333; background-color: darkgrey; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; }
+ #tqilfqxvlv .gt_column_spanner_outer { color: #333333; background-color: darkgrey; font-size: 100%; font-weight: normal; text-transform: inherit; padding-top: 0; padding-bottom: 0; padding-left: 4px; padding-right: 4px; }
+ #tqilfqxvlv .gt_column_spanner_outer:first-child { padding-left: 0; }
+ #tqilfqxvlv .gt_column_spanner_outer:last-child { padding-right: 0; }
+ #tqilfqxvlv .gt_column_spanner { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 5px; overflow-x: hidden; display: inline-block; width: 100%; }
+ #tqilfqxvlv .gt_spanner_row { border-bottom-style: hidden; }
+ #tqilfqxvlv .gt_group_heading { padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; text-align: left; }
+ #tqilfqxvlv .gt_empty_group_heading { padding: 0.5px; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; vertical-align: middle; }
+ #tqilfqxvlv .gt_from_md> :first-child { margin-top: 0; }
+ #tqilfqxvlv .gt_from_md> :last-child { margin-bottom: 0; }
+ #tqilfqxvlv .gt_row { padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; }
+ #tqilfqxvlv .gt_stub { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; }
+ #tqilfqxvlv .gt_stub_row_group { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; vertical-align: top; }
+ #tqilfqxvlv .gt_row_group_first td { border-top-width: 2px; }
+ #tqilfqxvlv .gt_row_group_first th { border-top-width: 2px; }
+ #tqilfqxvlv .gt_table_body { border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
+ #tqilfqxvlv .gt_sourcenotes { color: #333333; background-color: OldLace; border-bottom-style: none; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; }
+ #tqilfqxvlv .gt_sourcenote { font-size: 90%; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; text-align: left; }
+ #tqilfqxvlv .gt_left { text-align: left; }
+ #tqilfqxvlv .gt_center { text-align: center; }
+ #tqilfqxvlv .gt_right { text-align: right; font-variant-numeric: tabular-nums; }
+ #tqilfqxvlv .gt_font_normal { font-weight: normal; }
+ #tqilfqxvlv .gt_font_bold { font-weight: bold; }
+ #tqilfqxvlv .gt_font_italic { font-style: italic; }
+ #tqilfqxvlv .gt_super { font-size: 65%; }
+ #tqilfqxvlv .gt_footnote_marks { font-size: 75%; vertical-align: 0.4em; position: initial; }
+ #tqilfqxvlv .gt_asterisk { font-size: 100%; vertical-align: 0; }
+ 
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead class="gt_header">
+  <tr>
+    <th colspan="7" class="gt_heading gt_title gt_font_normal">Calibration of coral Sr/Ca to SST, Ordinary Least Square</th>
+  </tr>
+</thead>
+<tr class="gt_col_headings">
+  <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Coral ID">Coral ID</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="SST">SST</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Slope">Slope</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Slope SE$^a$">Slope SE$^a$</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Intercept">Intercept</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Intercept SE$^a$">Intercept SE$^a$</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="R$^2$">R$^2$</th>
+</tr>
+<tbody class="gt_table_body">
+  <tr>
+    <td class="gt_row gt_left">A1 (S.Sidera)</td>
+    <td class="gt_row gt_left">DRTO</td>
+    <td class="gt_row gt_right">−0.040</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">10.004</td>
+    <td class="gt_row gt_right">0.024</td>
+    <td class="gt_row gt_right">0.95</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_left">A1 (S.Sidera)</td>
+    <td class="gt_row gt_left">SANF1</td>
+    <td class="gt_row gt_right">−0.043</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">10.115</td>
+    <td class="gt_row gt_right">0.025</td>
+    <td class="gt_row gt_right">0.93</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_left">F1 (S.Sidera)</td>
+    <td class="gt_row gt_left">DRTO</td>
+    <td class="gt_row gt_right">−0.042</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">10.083</td>
+    <td class="gt_row gt_right">0.025</td>
+    <td class="gt_row gt_right">0.95</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_left">F1 (S.Sidera)</td>
+    <td class="gt_row gt_left">SANF1</td>
+    <td class="gt_row gt_right">−0.046</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">10.221</td>
+    <td class="gt_row gt_right">0.027</td>
+    <td class="gt_row gt_right">0.93</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_left">B3 (M. faveolata)</td>
+    <td class="gt_row gt_left">DRTO</td>
+    <td class="gt_row gt_right">−0.029</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">9.955</td>
+    <td class="gt_row gt_right">0.028</td>
+    <td class="gt_row gt_right">0.87</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_left">B3 (M. faveolata)</td>
+    <td class="gt_row gt_left">SANF1</td>
+    <td class="gt_row gt_right">−0.031</td>
+    <td class="gt_row gt_right">0.001</td>
+    <td class="gt_row gt_right">10.031</td>
+    <td class="gt_row gt_right">0.027</td>
+    <td class="gt_row gt_right">0.85</td>
+  </tr>
+</tbody>
+  <tfoot class="gt_sourcenotes">
+  
+  <tr>
+    <td class="gt_sourcenote" colspan="7">$^a$ SE: standard error</td>
+  </tr>
+
+</tfoot>
+
+</table>
+
+</div>
+        </div></div>
+</div>
+<p>The coefficients are very similar to each other, which is not surprising. The weighted least square resulted in slightly lower standard error on the intercept.</p>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<p>DeLong, K.L., J.A. Flannery, C.R. Maupin, R.Z. Poore, and T.M. Quinn. 2011. A coral Sr/Ca calibration and replication study of two massive corals from the Gulf of Mexico. Palaeogeography, Palaeoclimatology, Palaeoecology, 307(1-4), 117-128. doi: 10.1016/j.palaeo.2011.05.005</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="DataExploration.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Exploring the Dry Tortugas Sr/Ca data</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="BayesianCalibration.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Calibration of the Sr/Ca paleothermometer: A Bayesian approach</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authors">Authors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble">Preamble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">Loading the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinary-least-square-regression">Ordinary least square regression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#siderastrea-sidera"><em>Siderastrea sidera</em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#core-a1">Core A1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#core-f1">Core F1</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#montastraea-faveolata"><em>Montastraea faveolata</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weighted-least-square-regression">Weighted least square regression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><em>Siderastrea sidera</em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Core A1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Core F1</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><em>Montastraea faveolata</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Deborah Khider
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
