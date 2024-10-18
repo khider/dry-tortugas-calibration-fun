@@ -5,3 +5,5 @@
 .DS_Store
 /.ipynb_checkpoints
 /paleobook/_build
+/paleobook/.ipynb_checkpoints
+/paleobook/.virtual_documents
