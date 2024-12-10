@@ -11,3 +11,6 @@ dependencies:
   - pip
   - pip:
     - pyleoclim
+    - xlrd
+    - great_tables
+    - xarray = 2024.11.0
