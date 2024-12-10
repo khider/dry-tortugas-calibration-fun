@@ -1,4 +1,4 @@
-cff-version: 1.0.0.1
+cff-version: 1.1.0.0
 message: "If you use this Book, please cite it as below."
 authors:
   - family-names: Khider
@@ -7,7 +7,7 @@ authors:
     affiliation: University of Southern California
 title: "Coral Sr/Ca Calibration - An example from Dry Tortugas" 
 url: "https://github.com/khider/dry-tortugas-calibration-fun/tree/info"
-version: v1.0.0
-date-released: 2024-09-06
+version: v1.1.0
+date-released: 2024-12-09
 doi: 10.5281/zenodo.13699185
 
