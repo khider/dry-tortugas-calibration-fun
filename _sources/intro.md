@@ -5,7 +5,7 @@
 # Coral Sr/Ca calibration - An example from Dry Tortugas
 
 
-This Jupyter Book covers the calibration of coral Sr/Ca to sea surface temperature using data from Dry Tortugas (DeLong et al., 2011). The book illustrates the frequentist and Bayesian approach to the task. 
+This Jupyter Book covers the calibration of coral Sr/Ca to sea surface temperature using data from Dry Tortugas (DeLong et al., 2011). The book illustrates the frequentist and Bayesian approach to the task.
 
 ## Author
 
@@ -21,13 +21,13 @@ This Jupyter Book covers the calibration of coral Sr/Ca to sea surface temperatu
 
 This Book is broken down into three chapters:
 - Data exploration of the Sr/Ca data from three cores and nearby sea surface temperature data
-- Calibration uses ordinary and weighted least square regression
-- Bayesian calibration presents a Bayesian alternative to OLS. 
+- Frequentist calibration using ordinary and weighted least square regression
+- Bayesian calibration presents a Bayesian alternative to OLS.
 
 ## Data Reference
 DeLong, K.L., J.A. Flannery, C.R. Maupin, R.Z. Poore, and T.M. Quinn. 2011. A coral Sr/Ca calibration and replication study of two massive corals from the Gulf of Mexico. Palaeogeography, Palaeoclimatology, Palaeoecology, 307(1-4), 117-128. doi: 10.1016/j.palaeo.2011.05.005
 
-Dataset citation: DeLong, K.L.; Flannery, J.A.; Maupin, C.R.; Poore, R.Z.; Quinn, T.M. (2011-09-14): NOAA/WDS Paleoclimatology - Dry Tortugas Siderastrea and Montastraea Coral Sr/Ca Data, 1992-2008. [indicate subset used]. NOAA National Centers for Environmental Information. https://doi.org/10.25921/n674-8145. Accessed 2024-09-05. 
+Dataset citation: DeLong, K.L.; Flannery, J.A.; Maupin, C.R.; Poore, R.Z.; Quinn, T.M. (2011-09-14): NOAA/WDS Paleoclimatology - Dry Tortugas Siderastrea and Montastraea Coral Sr/Ca Data, 1992-2008. [indicate subset used]. NOAA National Centers for Environmental Information. https://doi.org/10.25921/n674-8145. Accessed 2024-09-05.
 
 ## License
 

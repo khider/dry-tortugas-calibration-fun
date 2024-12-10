@@ -6,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Calibration of the Sr/Ca paleothermometer: A Bayesian approach &#8212; Coral Sr/Ca Calibration - An Example from Dry Tortugas</title>
   
@@ -16,30 +16,33 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -57,14 +60,13 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'BayesianCalibration';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Calibration of the Sr/Ca paleothermometer: an example from Dry Tortugas" href="Calibration.html" />
+    <link rel="prev" title="Calibration of the Sr/Ca paleothermometer: an example from Dry Tortugas" href="FrequentistCalibration.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -80,19 +82,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -100,7 +91,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -108,8 +98,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -125,7 +115,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -155,21 +146,17 @@
     
     
     <img src="_static/coral_logo.jpg" class="logo__image only-light" alt="Coral Sr/Ca Calibration - An Example from Dry Tortugas - Home"/>
-    <script>document.write(`<img src="_static/coral_logo.jpg" class="logo__image only-dark" alt="Coral Sr/Ca Calibration - An Example from Dry Tortugas - Home"/>`);</script>
+    <img src="_static/coral_logo.jpg" class="logo__image only-dark pst-js-only" alt="Coral Sr/Ca Calibration - An Example from Dry Tortugas - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -186,7 +173,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Calibration</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Calibration.html">Calibration of the Sr/Ca paleothermometer: an example from Dry Tortugas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FrequentistCalibration.html">Calibration of the Sr/Ca paleothermometer: an example from Dry Tortugas</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Calibration of the Sr/Ca paleothermometer: A Bayesian approach</a></li>
 </ul>
 
@@ -342,24 +329,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -384,19 +363,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authors">Authors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble">Preamble</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concept-in-probability">Concept in probability</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-probability">Marginal Probability</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-probability">Conditional Probability</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#joint-probability">Joint Probability</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-theorem">Bayes’ theorem</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-theorem-and-linear-regression">Bayes’ theorem and linear regression</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble">Preamble</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">Loading the data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#siderastrea-sidera-core-a1"><em>Siderastrea sidera</em> - core A1</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-the-model">Estimating the model</a></li>
@@ -406,6 +373,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#montastraea-faveolata"><em>Montastraea faveolata</em></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Estimating the model</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Analyzing the model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-the-bayesian-framework">Why use the Bayesian framework?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-of-uncertainty-using-bayesian-posteriors">Estimation of uncertainty using Bayesian posteriors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bayesian-pitfall-encoding-priors">Bayesian pitfall: encoding priors</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
@@ -428,49 +400,9 @@ document.write(`
 </section>
 <section id="preamble">
 <h2>Preamble<a class="headerlink" href="#preamble" title="Link to this heading">#</a></h2>
-<p>In the <a class="reference internal" href="Calibration.html"><span class="std std-doc">previous notebook</span></a>, we performed the regression using least square regression. This notebook approaches the same task using Bayesian statistics. Let’s start with a primer on Bayes’ theorem.</p>
-<section id="concept-in-probability">
-<h3>Concept in probability<a class="headerlink" href="#concept-in-probability" title="Link to this heading">#</a></h3>
-<p>Let’s first define some concepts in probability.</p>
-<section id="marginal-probability">
-<h4>Marginal Probability<a class="headerlink" href="#marginal-probability" title="Link to this heading">#</a></h4>
-<p>This is the probability of an event occuring regarless of other events. For instance, when flipping a coin, the probability of getting a head (H) is:</p>
-<p><span class="math notranslate nohighlight">\(P(H)=0.5\)</span></p>
-<p>The probability of drawing a diamond (D) from a deck of card is:</p>
-<p><span class="math notranslate nohighlight">\(P(D)=0.25\)</span></p>
-</section>
-<section id="conditional-probability">
-<h4>Conditional Probability<a class="headerlink" href="#conditional-probability" title="Link to this heading">#</a></h4>
-<p>This is the probability of event B given that event A has occured and is denoted <span class="math notranslate nohighlight">\(P(B|A)\)</span>.</p>
-<p>Before we go any further, we also need to define the notion of independence. Two events are <em>independent</em> if the occurence of A does not affect the probability of B. This is the case, for instance, of coin flips. The outcome of the first flip won’t affect the outcome of the second flip. For two independent events, then:</p>
-<p><span class="math notranslate nohighlight">\(P(B|A)=P(B)\)</span></p>
-<p>Let’s now consider drawing from a deck of cards without replacement. Let’s say that on your first draw, you drew a ace of heart, then the probability of drawing another ace on your second draw is <span class="math notranslate nohighlight">\(\frac{3}{51}\)</span>. If you draw an ace on the first draw then there is only 51 cards left in the deck and 3 aces.</p>
-</section>
-<section id="joint-probability">
-<h4>Joint Probability<a class="headerlink" href="#joint-probability" title="Link to this heading">#</a></h4>
-<p>A joint probability is the probability of two events occuring at the same time. For instance, this answers the question of “what is the probability of flipping a head twice in a row?”</p>
-<p>Let’s think about all the possible combinations we can come up with: {H,H}, {H,T}, {T,H}, {T,T}. From this sample space, it is obvious that the probability is 0.25. The general formula for two independent events A and B (i.e., the firt flipping of the coin doesn’t affect the second flip) is:</p>
-<p><span class="math notranslate nohighlight">\(P(A \cap B) = P(A)\times P(B)\)</span></p>
-<p>In the case of dependent event (e.g., sampling from a deck of cards without replacement), the formula becomes:</p>
-<p><span class="math notranslate nohighlight">\(P(A \cap B) = P(A)\times P(B|A)\)</span></p>
-<p>This is going to become useful to look at Bayes’ theorem.</p>
-</section>
-</section>
-<section id="bayes-theorem">
-<h3>Bayes’ theorem<a class="headerlink" href="#bayes-theorem" title="Link to this heading">#</a></h3>
-<p>Bayes’ theorem states:</p>
-<p><span class="math notranslate nohighlight">\(P(A\vert B) = \frac{P(B\vert A)P(A)}{P(B)}\)</span></p>
-<p>In this equation,</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(P(A\vert B)\)</span> is the conditional probability of event A occuring given than even B is true. It is also called the posterior probability of A given B.</p></li>
-<li><p><span class="math notranslate nohighlight">\(P(B\vert A)\)</span> is also a conditional probability. It is the probability of event B occurring given that A is true. It can also be interpreted as the likelihood of
-A given a fixed B.</p></li>
-<li><p><span class="math notranslate nohighlight">\(P(A)\)</span> and <span class="math notranslate nohighlight">\(P(B)\)</span> are the probabilities of observing A and B respectively without any given conditions; they are known as the prior probability (what we know about the probability of A prior to seeing the data) and marginal probability (the evidence that we have about B), respectively.</p></li>
-</ul>
-<section id="bayes-theorem-and-linear-regression">
-<h4>Bayes’ theorem and linear regression<a class="headerlink" href="#bayes-theorem-and-linear-regression" title="Link to this heading">#</a></h4>
-<p>The goal of Bayesian linear regression is the same as its frequentist counterpart, which is to infer the parameters of the equation (i.e., the slope and intercept) that best fits the data. The main difference between the two is that Bayesian regression tries to infer the distribution of the parameters (the posterior) while the frequentist approach derives fixed parameters. A good introduction on Bayesian Linear Regression is available in this <a class="reference external" href="https://medium.com/intuition/gentle-introduction-of-bayesian-linear-regression-c83da6b0d1f7">Medium blog post</a>.</p>
-<p>To perform the regression on the coral data from Delong et al. (2011), we will be using the <a class="reference external" href="https://www.pymc.io/welcome.html#sponsors">PyMC package</a>. The following is adapted from the <a class="reference external" href="https://www.pymc.io/projects/docs/en/stable/learn/core_notebooks/GLM_linear.html#glm-linear">example provided with package</a>.</p>
+<p>In a <a class="reference internal" href="FrequentistCalibration.html"><span class="std std-doc">previous notebook</span></a>, we performed the regression using various flavors of least squares. This notebook approaches the same task using Bayesian statistics, for which a good introduction is given <a class="reference external" href="https://seeing-theory.brown.edu/bayesian-inference/index.html#section2">here</a>.</p>
+<p>The goal of Bayesian linear regression is the same as its frequentist counterpart, which is to infer the parameters of the regression equation (i.e., the slope and intercept) that best fits the data. The main difference between the two is that Bayesian regression tries to infer the (posterior) distribution of the parameters, given some <em>a priori</em> notions and the data. This is in contrast to the frequentist approach, which makes often strong assumptions so it can derive best estimates for these parameters, occasionally with a measure of uncertainty, using only the data.  A good introduction on Bayesian Linear Regression is available in this <a class="reference external" href="https://medium.com/intuition/gentle-introduction-of-bayesian-linear-regression-c83da6b0d1f7">Medium blog post</a>.</p>
+<p>To perform the regression on the coral data from Delong et al. (2011), we will be using the <a class="reference external" href="https://www.pymc.io/welcome.html">PyMC package</a>. The following is adapted from the <a class="reference external" href="https://www.pymc.io/projects/docs/en/stable/learn/core_notebooks/GLM_linear.html#glm-linear">example provided with package</a>.</p>
 <p>Let’s also import some necessary packages along with PyMC:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -479,6 +411,7 @@ A given a fixed B.</p></li>
 <span class="n">pytensor</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;NUMBA&#39;</span>
 <span class="n">pytensor</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">cxx</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
 
+<span class="c1"># Necessary tool for the Bayesian calibration and visualization</span>
 <span class="kn">import</span> <span class="nn">arviz</span> <span class="k">as</span> <span class="nn">az</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -486,14 +419,25 @@ A given a fixed B.</p></li>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pymc</span> <span class="k">as</span> <span class="nn">pm</span>
 <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
 
 <span class="kn">from</span> <span class="nn">pymc</span> <span class="kn">import</span> <span class="n">HalfCauchy</span><span class="p">,</span> <span class="n">Model</span><span class="p">,</span> <span class="n">Normal</span><span class="p">,</span> <span class="n">sample</span><span class="p">,</span> <span class="n">Uniform</span>
+
+<span class="c1"># Packages to handle paleoclimate data</span>
+<span class="kn">import</span> <span class="nn">pyleoclim</span> <span class="k">as</span> <span class="nn">pyleo</span>
+<span class="kn">from</span> <span class="nn">pylipd.lipd</span> <span class="kn">import</span> <span class="n">LiPD</span>
+
+<span class="c1"># Package to make publication-ready tables</span>
+<span class="kn">from</span> <span class="nn">great_tables</span> <span class="kn">import</span> <span class="n">GT</span><span class="p">,</span> <span class="n">md</span><span class="p">,</span> <span class="n">html</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING (pytensor.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-</section>
 </section>
 <section id="loading-the-data">
 <h2>Loading the data<a class="headerlink" href="#loading-the-data" title="Link to this heading">#</a></h2>
@@ -656,12 +600,12 @@ A given a fixed B.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/a6871b1996a5dd40ae6e9bdf1fd5f2c85f636afd29523f9cfef49a3b595c6070.png" src="_images/a6871b1996a5dd40ae6e9bdf1fd5f2c85f636afd29523f9cfef49a3b595c6070.png" />
+<img alt="_images/4537fdd28c74d09a493b65385cdd24161b3a6d0c0fd36ad9dba9c704f9e76510.png" src="_images/4537fdd28c74d09a493b65385cdd24161b3a6d0c0fd36ad9dba9c704f9e76510.png" />
 </div>
 </div>
 <p>Let’s fit a Bayesian linear regression to the <em>Siderastrea sidera</em> - core A1 data. In PyMC, the model specifications takes place with a <code class="docutils literal notranslate"><span class="pre">with</span></code> epxression, called a context manager. By default, PyMC uses a <a class="reference external" href="http://arxiv.org/abs/1111.4246">NUTS sampler</a> to fit the model, resulting in a trace of samples representing the posterior distributions of the parameters.</p>
-<p>Since we are in Bayesian framework, we first need to define prior distributions for the slope and intercept as well as the expected error of the model. Let’s first assume that we don’t know much about the relationship between Sr/Ca and temperature, except for the fact that it is negative (which we infer from a simple plot from our <a class="reference internal" href="DataExploration.html"><span class="std std-doc">data exploration</span></a> work). To represent this poor prior knowledge, we can use a uniform distribution with an upper limit of 0. The plot also suggests a total Sr/Ca change of -0.5mmol/mol for 10°C of temperature, which gives an average slope of -0.05 mmol/mol/°C. Let’s double this for the lower limit of the uniform distribution.</p>
-<p>To set the prior for the intercept, we can also use a non-informed, uniform prior. The same figure places the y-intercept around 10mmol/mol. Let’s use a range between 5 and 15 as boundaries for the uniform distribution:</p>
+<p>In the Bayesian framework, we first need to define prior distributions for the slope and intercept as well as the expected error of the model. Let’s first assume that we don’t know much about the relationship between Sr/Ca and temperature, except for the fact that it is negative (which we infer from a simple plot from our <a class="reference internal" href="DataExploration.html"><span class="std std-doc">data exploration</span></a> work). To represent this poor prior knowledge, we can use a uniform distribution with an upper limit of 0. The plot also suggests a total Sr/Ca change of -0.5mmol/mol for 10°C of temperature, which gives an average slope of -0.05 mmol/mol/°C. Let’s double this for the lower limit of the uniform distribution.</p>
+<p>To set the prior for the intercept, we can also use a non-informative, uniform prior. The same figure places the y-intercept around 10mmol/mol. Let’s use a range between 5 and 15 as boundaries for the uniform distribution:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">Model</span><span class="p">()</span> <span class="k">as</span> <span class="n">model</span><span class="p">:</span>
@@ -679,12 +623,14 @@ A given a fixed B.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Sampling 4 chains, 0 divergences <span style="color: #008000; text-decoration-color: #008000">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span style="color: #800080; text-decoration-color: #800080">100%</span> <span style="color: #008080; text-decoration-color: #008080">0:00:00</span> / <span style="color: #808000; text-decoration-color: #808000">0:00:12</span>
-</pre>
-</div><div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
-</div><div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">
-</pre>
-</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 1_000 tune and 3_000 draw iterations (4_000 + 12_000 draws total) took 12 seconds.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [Slope, Intercept, sigma]
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "7a089f7ecb894bd8a50d7bb7e20ab310", "version_major": 2, "version_minor": 0}</script><div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 1_000 tune and 3_000 draw iterations (4_000 + 12_000 draws total) took 7 seconds.
 </pre></div>
 </div>
 </div>
@@ -701,11 +647,11 @@ A given a fixed B.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/4c770fd331c812554a72b27aa3c29cceae0da52da89715c9b26b3bbd82898bfb.png" src="_images/4c770fd331c812554a72b27aa3c29cceae0da52da89715c9b26b3bbd82898bfb.png" />
+<img alt="_images/8812e78498ef07018f7cb5557f3a06c42543cf0922db520a2c2c70a229496b72.png" src="_images/8812e78498ef07018f7cb5557f3a06c42543cf0922db520a2c2c70a229496b72.png" />
 </div>
 </div>
-<p>The left panel shows the posterior distrubutions for the slope, intercept and the error on the regression (<code class="docutils literal notranslate"><span class="pre">sigma</span></code>). The right panel shows the sampling chain for the posterior. The sampling chains for the three parameters seem homogeneous and stationary (no large drifts and other patterns). This means that the algorithm has likely converged towards the answer.</p>
-<p>Now let’s have a closer look at the mean of the distributions and associated standard deviations</p>
+<p>The left panel shows the posterior distributions for the slope, intercept and the standard deviation of the regression residuals (<code class="docutils literal notranslate"><span class="pre">sigma</span></code>). Each line on this plot represents a different sampling chain, a parameter which was set to 4. For convergence, you should ensure that the 4 chains give you a similar answer. The right panel shows the 4 sampling chains for the posterior (i.e. the actual sequence of draws from the posterior). The sampling chains for the three parameters seem homogeneous and stationary (no large drifts and other noticeable patterns). This is good news, and likely means that the algorithm has likely converged towards the answer.</p>
+<p>Now let’s have a closer look at the mean of the distributions and associated standard deviations:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope Mean:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">idata</span><span class="o">.</span><span class="n">posterior</span><span class="p">[</span><span class="s1">&#39;Slope&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -718,13 +664,13 @@ A given a fixed B.</p></li>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Slope Mean: -0.043
 Slope Standard Deviation: 0.001
-Intercept Mean: 10.115
-Intercept Standard Deviation: 0.025
+Intercept Mean: 10.116
+Intercept Standard Deviation: 0.026
 </pre></div>
 </div>
 </div>
 </div>
-<p>The statistics of the distribution are the same as the point estimates obtained from the linear regression <a class="reference internal" href="Calibration.html"><span class="std std-doc">performed in the previous chapter</span></a>. This is to be expected. However, a big advantage of Bayesian regression is that we now have joint probability distirbutions for possible regression lines. Let’s plot a few of them:</p>
+<p>The statistics of the distribution are the same as the point estimates obtained from the linear regression <a class="reference internal" href="FrequentistCalibration.html"><span class="std std-doc">performed in the previous chapter</span></a>. This is to be expected. However, a big advantage of Bayesian regression is that we now have joint probability distributions for possible regression lines. Let’s plot a few of them:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idata</span><span class="o">.</span><span class="n">posterior</span><span class="p">[</span><span class="s2">&quot;y_model&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">idata</span><span class="o">.</span><span class="n">posterior</span><span class="p">[</span><span class="s2">&quot;Intercept&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">idata</span><span class="o">.</span><span class="n">posterior</span><span class="p">[</span><span class="s2">&quot;Slope&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -739,9 +685,10 @@ Intercept Standard Deviation: 0.025
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/c70c3bfd09bfaf765846fde47ef4e924929ac4edff263de23ee091fa458ef2dc.png" src="_images/c70c3bfd09bfaf765846fde47ef4e924929ac4edff263de23ee091fa458ef2dc.png" />
+<img alt="_images/6a0c8c2428f69448b8f82b26af7793e9b0a05c90f247ef706f6de182a7c88c86.png" src="_images/6a0c8c2428f69448b8f82b26af7793e9b0a05c90f247ef706f6de182a7c88c86.png" />
 </div>
 </div>
+<p>We can see that the lines are very close to each other around the centroid of the dataset (SST near 26°C, Sr/Ca near 9 mmol/mol) but fan out near the edges of the range – as predicted by theory.</p>
 </section>
 </section>
 <section id="montastraea-faveolata">
@@ -768,7 +715,7 @@ Intercept Standard Deviation: 0.025
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/70271934cf3ad5304c66fad0827e3985b1eaf3b156a6f407a7b9a0f71ccd0e3e.png" src="_images/70271934cf3ad5304c66fad0827e3985b1eaf3b156a6f407a7b9a0f71ccd0e3e.png" />
+<img alt="_images/26026734680a6c0cbbcaf33ec7fbdc7d7f69c807492cf64b610cd9abaf5d8b24.png" src="_images/26026734680a6c0cbbcaf33ec7fbdc7d7f69c807492cf64b610cd9abaf5d8b24.png" />
 </div>
 </div>
 <p>Let’s fit our model:</p>
@@ -795,10 +742,8 @@ Multiprocess sampling (4 chains in 4 jobs)
 NUTS: [Slope, Intercept, sigma]
 </pre></div>
 </div>
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "eb9cc77dd2b1451a9aff2413924ac0fd", "version_major": 2, "version_minor": 0}</script><div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
-</div><div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">
-</pre>
-</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 1_000 tune and 5_000 draw iterations (4_000 + 20_000 draws total) took 12 seconds.
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "5449519d3b0d4309a61497752bf81118", "version_major": 2, "version_minor": 0}</script><div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 1_000 tune and 5_000 draw iterations (4_000 + 20_000 draws total) took 9 seconds.
 </pre></div>
 </div>
 </div>
@@ -815,9 +760,10 @@ NUTS: [Slope, Intercept, sigma]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/8a6f401cf71ffb19aa0a889c26efa47b787787fe0a40634fd52bb2dd832ec0cf.png" src="_images/8a6f401cf71ffb19aa0a889c26efa47b787787fe0a40634fd52bb2dd832ec0cf.png" />
+<img alt="_images/c5bdd6a9995c33c51ef71d327bdcb4b48e74cd67b6d594d6f4915a6e5c76380f.png" src="_images/c5bdd6a9995c33c51ef71d327bdcb4b48e74cd67b6d594d6f4915a6e5c76380f.png" />
 </div>
 </div>
+<p>Once again, the different lines on the posterior distributions represent the 4 sampling chains. They show similar answers, suggesting that the distribution is independent of the choice of initial condition.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope Mean:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">idata</span><span class="o">.</span><span class="n">posterior</span><span class="p">[</span><span class="s1">&#39;Slope&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -838,9 +784,584 @@ Intercept Standard Deviation: 0.028
 </div>
 </section>
 </section>
+<section id="why-use-the-bayesian-framework">
+<h2>Why use the Bayesian framework?<a class="headerlink" href="#why-use-the-bayesian-framework" title="Link to this heading">#</a></h2>
+<p>Thanks to toolboxes like <a class="reference external" href="https://www.pymc.io/welcome.html">PyMC</a>, it is now easier than ever to implement Bayesian regression. But is it truly necessary? After all, our mean and standard deviation are similar to that obtained with the <a class="reference internal" href="FrequentistCalibration.html"><span class="std std-doc">frequentist method</span></a>.  However, there are several advantages in using the Bayesian framework:</p>
+<ol class="arabic simple">
+<li><p>The ability to sample directly from the posterior distributions to create possible equations for the calibration, which allows for a better estimation of the uncertainty. Such an example can be  <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013PA002534">Khider et al. (2014)</a>.</p></li>
+<li><p>Calibrating when there is not a lot of data. One of the advantages (and drawbacks) of Bayesian statistics is the encoding of prior knowledge in the form of a probability distribution. In the case of the coral calibration presented here, this prior knowledge may have come from a similar exercise performed on the same species of coral, or in a similar location.</p></li>
+</ol>
+<section id="estimation-of-uncertainty-using-bayesian-posteriors">
+<h3>Estimation of uncertainty using Bayesian posteriors<a class="headerlink" href="#estimation-of-uncertainty-using-bayesian-posteriors" title="Link to this heading">#</a></h3>
+<p>As mentioned earlier, a big advantage of Bayesian regression is that we now have joint probability distributions for possible regression lines. In other words, you have possible equations for regression lines that can be applied to all points in the timeseries to get an ensemble of possible realizations of the temperature evolution. This has important implications for uncertainty quantification since the errors are now becoming dependent and therefore the uncertainty is less when making comparison within the timeseries (e.g., comparing the temperature over the 1980-2000 period with that of the 1960-1980 period) than between two timeseries.</p>
+<p>For this example, let’s first re-run the calibration for <em>Siderastrea sidera</em> - core A1 with the most recent subset of the data (50% split), keeping the second half of the data for validation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cleaned_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Mean Sr/Ca (mmol/mol)&#39;</span><span class="p">,</span><span class="s1">&#39;Sand Key SST (ºC)&#39;</span><span class="p">])</span> <span class="c1">#Remove NaNs</span>
+<span class="n">split_index</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleaned_df</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+
+<span class="c1"># Split the DataFrame into two halves</span>
+<span class="n">df_train</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="n">split_index</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s re-run the calibration using the same priors:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">df_train</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">df_train</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">12</span><span class="p">]</span>
+
+<span class="k">with</span> <span class="n">Model</span><span class="p">()</span> <span class="k">as</span> <span class="n">model</span><span class="p">:</span>
+    
+    <span class="c1"># Prior is a uniform distribution over the -1 to 0 interval for the slope and 0 to 50 for intercept</span>
+    <span class="n">slope</span> <span class="o">=</span> <span class="n">Uniform</span><span class="p">(</span><span class="s1">&#39;Slope&#39;</span><span class="p">,</span><span class="n">lower</span><span class="o">=-</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">intercept</span> <span class="o">=</span> <span class="n">Uniform</span><span class="p">(</span><span class="s1">&#39;Intercept&#39;</span><span class="p">,</span><span class="n">lower</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="n">HalfCauchy</span><span class="p">(</span><span class="s2">&quot;sigma&quot;</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    
+    <span class="c1">#Define the likelihood </span>
+    <span class="n">likelihood</span> <span class="o">=</span> <span class="n">Normal</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="n">intercept</span> <span class="o">+</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="n">sigma</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+    <span class="c1">#inference with 3000 samples, tuning on the first 1000 with 4 chains   </span>
+    <span class="n">idata</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">draws</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">chains</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">tune</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [Slope, Intercept, sigma]
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "849f6b71c5624ba3855c3379c0522c28", "version_major": 2, "version_minor": 0}</script><div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 1_000 tune and 3_000 draw iterations (4_000 + 12_000 draws total) took 8 seconds.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s have a look at the mean value and error on the coefficients of the equation:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope Mean:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">idata</span><span class="o">.</span><span class="n">posterior</span><span class="p">[</span><span class="s1">&#39;Slope&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope Standard Deviation:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">idata</span><span class="o">.</span><span class="n">posterior</span><span class="p">[</span><span class="s1">&#39;Slope&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept Mean:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">idata</span><span class="o">.</span><span class="n">posterior</span><span class="p">[</span><span class="s1">&#39;Intercept&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept Standard Deviation:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">idata</span><span class="o">.</span><span class="n">posterior</span><span class="p">[</span><span class="s1">&#39;Intercept&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Slope Mean: -0.046
+Slope Standard Deviation: 0.001
+Intercept Mean: 10.188
+Intercept Standard Deviation: 0.035
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s calculate SST from coral Sr/Ca and plot some traces for the entire record. Each trace represents a possible realization for the sea surface temperature evolution that takes into account the uncertainty in the calibration:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ser</span> <span class="o">=</span> <span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="n">idata</span><span class="o">.</span><span class="n">posterior</span><span class="p">[</span><span class="s2">&quot;Intercept&quot;</span><span class="p">])</span><span class="o">/</span><span class="n">idata</span><span class="o">.</span><span class="n">posterior</span><span class="p">[</span><span class="s2">&quot;Slope&quot;</span><span class="p">]</span>
+
+<span class="c1">#create a Pyleoclim EnsembleSeries Object from the first chain</span>
+<span class="n">ser_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3000</span><span class="p">):</span>
+    <span class="n">ts</span> <span class="o">=</span><span class="n">pyleo</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ser</span><span class="p">[:,</span><span class="mi">0</span><span class="p">,</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">time_name</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">time_unit</span><span class="o">=</span><span class="s1">&#39;CE&#39;</span><span class="p">,</span> <span class="n">value_name</span> <span class="o">=</span> <span class="s1">&#39;Sea Surface Temperature&#39;</span><span class="p">,</span> <span class="n">value_unit</span> <span class="o">=</span> <span class="s1">&#39;$\circ$C&#39;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;core A1&#39;</span><span class="p">)</span>
+    <span class="n">ser_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+
+<span class="n">ens</span> <span class="o">=</span> <span class="n">pyleo</span><span class="o">.</span><span class="n">EnsembleSeries</span><span class="p">(</span><span class="n">ser_list</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">12</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;DRTO&#39;</span><span class="p">)</span>
+<span class="n">ens</span><span class="o">.</span><span class="n">plot_traces</span><span class="p">(</span><span class="n">num_traces</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">split_index</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1994</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="s1">&#39;Validation Period&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">2001</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="s1">&#39;Calibration Period&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/410a0ab54b0cc95c412f044e3bd654789d6b1216ddc96c2b6234eedcf50b072a.png" src="_images/410a0ab54b0cc95c412f044e3bd654789d6b1216ddc96c2b6234eedcf50b072a.png" />
+</div>
+</div>
+<p>Since the signal-to-noise (uncertainty) ratio for this particular example is large, the traces are close to each other and closely match the observed sea surface temperature evolution, including for the validation period.</p>
+<p>Let’s now apply this same calibration to another coral record from the same lcoation (Dry Tortugas) generated by <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013PA002524">Delong et al. (2014)</a>. The data for this record is available in the <a class="reference external" href="https://lipd.net">LiPD format</a> on the <a class="reference external" href="https://lipdverse.org/lipdverse/current_version/Ocn-DryTortugas.DeLong.2014.html">LiPDverse website</a> as part of the <a class="reference external" href="https://www.nature.com/articles/sdata201788#citeas">PAGES2k compilation</a>.</p>
+<p>The file is provided within the GitHub repository and we will open it with the <a class="reference external" href="https://pylipd.readthedocs.io/en/latest/">PyLiPD package</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">LiPD</span><span class="p">()</span>
+
+<span class="n">data_path</span> <span class="o">=</span> <span class="s1">&#39;./data/Ocn-DryTortugas.DeLong.2014.lpd&#39;</span>
+<span class="n">D</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">data_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading 1 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|█████████████████████████████████████████████| 1/1 [00:00&lt;00:00, 28.10it/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s extract the timeseries available in this dataset:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">D</span><span class="o">.</span><span class="n">get_timeseries_essentials</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">get_all_dataset_names</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dataSetName</th>
+      <th>archiveType</th>
+      <th>geo_meanLat</th>
+      <th>geo_meanLon</th>
+      <th>geo_meanElev</th>
+      <th>paleoData_variableName</th>
+      <th>paleoData_values</th>
+      <th>paleoData_units</th>
+      <th>paleoData_proxy</th>
+      <th>paleoData_proxyGeneral</th>
+      <th>time_variableName</th>
+      <th>time_values</th>
+      <th>time_units</th>
+      <th>depth_variableName</th>
+      <th>depth_values</th>
+      <th>depth_units</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Ocn-DryTortugas.DeLong.2014</td>
+      <td>Coral</td>
+      <td>24.6</td>
+      <td>-82.3</td>
+      <td>-4.0</td>
+      <td>Sr_Ca</td>
+      <td>[8.7956423285, 8.83055918875, 8.88449857625, 8...</td>
+      <td>mmol/mol</td>
+      <td>Sr/Ca</td>
+      <td>None</td>
+      <td>year</td>
+      <td>[2008.625, 2008.54166666667, 2008.45833333333,...</td>
+      <td>yr AD</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Let’s calibrate the Sr/Ca record:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sst</span> <span class="o">=</span> <span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;paleoData_values&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">-</span> <span class="n">idata</span><span class="o">.</span><span class="n">posterior</span><span class="p">[</span><span class="s2">&quot;Intercept&quot;</span><span class="p">])</span><span class="o">/</span><span class="n">idata</span><span class="o">.</span><span class="n">posterior</span><span class="p">[</span><span class="s2">&quot;Slope&quot;</span><span class="p">]</span>
+
+<span class="c1">#create a Pyleoclim EnsembleSeries Object from the first chain</span>
+<span class="n">sst_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3000</span><span class="p">):</span>
+    <span class="n">ts</span> <span class="o">=</span><span class="n">pyleo</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;time_values&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">value</span> <span class="o">=</span> <span class="n">sst</span><span class="p">[:,</span><span class="mi">0</span><span class="p">,</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">time_name</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">time_unit</span><span class="o">=</span><span class="s1">&#39;CE&#39;</span><span class="p">,</span> <span class="n">value_name</span> <span class="o">=</span> <span class="s1">&#39;Sea Surface Temperature&#39;</span><span class="p">,</span> <span class="n">value_unit</span> <span class="o">=</span> <span class="s1">&#39;$\circ$C&#39;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Dry Tortugas&#39;</span><span class="p">)</span>
+    <span class="n">ser_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+
+<span class="n">ens</span> <span class="o">=</span> <span class="n">pyleo</span><span class="o">.</span><span class="n">EnsembleSeries</span><span class="p">(</span><span class="n">ser_list</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">ens</span><span class="o">.</span><span class="n">plot_traces</span><span class="p">(</span><span class="n">num_traces</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/bcfe1432fe1943ae542921e0e6e8caed6c313ba0dbe8ad516c7f8e6f024e558d.png" src="_images/bcfe1432fe1943ae542921e0e6e8caed6c313ba0dbe8ad516c7f8e6f024e558d.png" />
+</div>
+</div>
+<p>Since the traces are close to each other (high signal to noise ratio), let’s zoom in on two years:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ens_slice</span> <span class="o">=</span> <span class="n">ens</span><span class="o">.</span><span class="n">slice</span><span class="p">([</span><span class="mi">1980</span><span class="p">,</span><span class="mi">1984</span><span class="p">])</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">ens_slice</span><span class="o">.</span><span class="n">plot_traces</span><span class="p">(</span><span class="n">num_traces</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/db4b67c81031db9bae5e379bd51c88d51291cd0a1686ec6c5b4600d1ebb412a7.png" src="_images/db4b67c81031db9bae5e379bd51c88d51291cd0a1686ec6c5b4600d1ebb412a7.png" />
+</div>
+</div>
+<p>You can observe slight differences in the temperature variability that is apparent at the trough and peaks. Further analyses (e.g., calculating temperature difference among time periods, establishing thresholds compared to a reference period, spectral and wavelet analyses) can be conducted on each member of the ensemble, proving more robust conclusions in relation to the uncertainty present in the record.</p>
+<p>As an example, let’s run spectral analysis on the ensemble. For pre-processing, we will interpolate the timeseries using <a class="reference external" href="https://pyleoclim-util.readthedocs.io/en/latest/core/api.html#pyleoclim.core.series.Series.interp">linear interpolation</a> to put it on an even grid and standardize it. We will use the <a class="reference external" href="https://pyleoclim-util.readthedocs.io/en/latest/core/api.html#pyleoclim.core.series.Series.spectral">multi-taper method (MTM</a> to compute the periodogram.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">psd_ens</span> <span class="o">=</span> <span class="n">ens</span><span class="o">.</span><span class="n">interp</span><span class="p">()</span><span class="o">.</span><span class="n">standardize</span><span class="p">()</span><span class="o">.</span><span class="n">spectral</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;mtm&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Performing spectral analysis on individual series: 100%|█| 6000/6000 [00:05&lt;00:0
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can plot the results as an envelope:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">psd_ens</span><span class="o">.</span><span class="n">plot_envelope</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 1000x400 with 1 Axes&gt;,
+ &lt;Axes: xlabel=&#39;Period [years CE]&#39;, ylabel=&#39;PSD&#39;&gt;)
+</pre></div>
+</div>
+<img alt="_images/3d12c8cdddfb6afcedecf679525d2f5c1f5cfc7509c65b309719851418136ae1.png" src="_images/3d12c8cdddfb6afcedecf679525d2f5c1f5cfc7509c65b309719851418136ae1.png" />
+</div>
+</div>
+<p>The only peak corresponds to the annual cycle.</p>
+</section>
+<section id="bayesian-pitfall-encoding-priors">
+<h3>Bayesian pitfall: encoding priors<a class="headerlink" href="#bayesian-pitfall-encoding-priors" title="Link to this heading">#</a></h3>
+<p>In a Bayesian framework, a prior is established and then refined as new evidence (i.e., data points) is incorporated, resulting in the posterior distribution. As a result, when evidence is sparse, the prior has a greater influence on the final estimates. Additionally, if the prior is overly specific, it can bias the final outcome towards that prior, even when new evidence is introduced.</p>
+<p>Let’s have a look at what happened when less data become available by randomly sampling 100%, 60%, 40%, 20% and 10% of the available data and when the prior is overly specific. For this example, we will set the prior from <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2008GC002106">Maupin et al. (2008)</a>:</p>
+<ol class="arabic simple">
+<li><p>Slope - Gaussian Prior - mean = -0.039 , standard deviation = 0.005</p></li>
+<li><p>Intercept - Gaussian Prior - mean = 10.008 , standard deviation = 0.13</p></li>
+</ol>
+<p>The equation was derived from coral heads of <em>Siderastrea sidera</em> from the same Dry Tortugas location, which makes it an ideal starting point for the prior. We will compare the results of the Bayesian calibration with that of its frequentist counterpart.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Re-open the calibration dataset as it has been overwrritten in the previous cell</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://www.ncei.noaa.gov/pub/data/paleo/coral/atlantic/tortugas2011.xls&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># grab the needed data without NaNs</span>
+
+<span class="n">cleaned_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Mean Sr/Ca (mmol/mol)&#39;</span><span class="p">,</span><span class="s1">&#39;Sand Key SST (ºC)&#39;</span><span class="p">])</span> <span class="c1">#Remove NaNs</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">cleaned_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">12</span><span class="p">]</span>
+
+<span class="n">df_calib</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;sst&#39;</span><span class="p">:</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;SrCa&#39;</span><span class="p">:</span><span class="n">y</span><span class="p">})</span>
+
+<span class="c1"># Set up the number of points for each experiment</span>
+<span class="n">stats</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Frequentist&#39;</span><span class="p">,</span><span class="s1">&#39;Bayesian&#39;</span><span class="p">]</span>
+<span class="n">opt</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.05</span><span class="p">]</span>
+
+<span class="c1"># Create empty lists to save the outcome</span>
+    <span class="c1"># Frequentist</span>
+<span class="n">slope</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">intercept</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">slope_u</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">intercept_u</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1">#Bayesian</span>
+<span class="n">slope_b</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">intercept_b</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">slope_b_u</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">intercept_b_u</span> <span class="o">=</span> <span class="p">[]</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loop through for the calculation</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">opt</span><span class="p">:</span>
+    <span class="n">sampled_df</span> <span class="o">=</span> <span class="n">df_calib</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="n">item</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">stat</span> <span class="ow">in</span> <span class="n">stats</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">stat</span> <span class="o">==</span> <span class="s1">&#39;Frequentist&#39;</span><span class="p">:</span>
+            <span class="n">X</span> <span class="o">=</span> <span class="n">sampled_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">Y</span> <span class="o">=</span> <span class="n">sampled_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+            <span class="n">ols</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">X</span><span class="p">)</span>
+            <span class="n">results</span> <span class="o">=</span> <span class="n">ols</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+            <span class="c1">#get the parameters</span>
+            <span class="n">i</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span>
+            <span class="c1">#get the standard error</span>
+            <span class="n">i_se</span><span class="p">,</span> <span class="n">s_se</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">bse</span>
+            <span class="c1"># save to the lists</span>
+            <span class="n">slope</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            <span class="n">intercept</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">slope_u</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s_se</span><span class="p">)</span>
+            <span class="n">intercept_u</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i_se</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">stat</span> <span class="o">==</span> <span class="s1">&#39;Bayesian&#39;</span><span class="p">:</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="n">sampled_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">sampled_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">with</span> <span class="n">Model</span><span class="p">()</span> <span class="k">as</span> <span class="n">model</span><span class="p">:</span>
+    
+                <span class="c1"># Prior is a uniform distribution over the -1 to 0 interval for the slope and 0 to 50 for intercept</span>
+                <span class="n">slope_p</span> <span class="o">=</span> <span class="n">Normal</span><span class="p">(</span><span class="s1">&#39;Slope&#39;</span><span class="p">,</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.015</span><span class="p">)</span>
+                <span class="n">intercept_p</span> <span class="o">=</span> <span class="n">Normal</span><span class="p">(</span><span class="s1">&#39;Intercept&#39;</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+                <span class="n">sigma</span> <span class="o">=</span> <span class="n">HalfCauchy</span><span class="p">(</span><span class="s2">&quot;sigma&quot;</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    
+                <span class="c1">#Define the likelihood </span>
+                <span class="n">likelihood</span> <span class="o">=</span> <span class="n">Normal</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="n">intercept_p</span> <span class="o">+</span> <span class="n">slope_p</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="n">sigma</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+                <span class="c1">#inference with 5000 samples, tuning on the first 1000 with 4 chains   </span>
+                <span class="n">idata</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">draws</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">chains</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">tune</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
+                <span class="c1"># save to the lists</span>
+                <span class="n">slope_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idata</span><span class="o">.</span><span class="n">posterior</span><span class="p">[</span><span class="s1">&#39;Slope&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+                <span class="n">intercept_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idata</span><span class="o">.</span><span class="n">posterior</span><span class="p">[</span><span class="s1">&#39;Intercept&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+                <span class="n">slope_b_u</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idata</span><span class="o">.</span><span class="n">posterior</span><span class="p">[</span><span class="s1">&#39;Slope&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+                <span class="n">intercept_b_u</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idata</span><span class="o">.</span><span class="n">posterior</span><span class="p">[</span><span class="s1">&#39;Intercept&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Not an appropriate statistical method&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [Slope, Intercept, sigma]
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "51c7244d73bd41a4aedb53521ed312b1", "version_major": 2, "version_minor": 0}</script><div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 1_000 tune and 5_000 draw iterations (4_000 + 20_000 draws total) took 8 seconds.
+Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [Slope, Intercept, sigma]
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "231b2c4f4f2e42d69df324d7f1cfc366", "version_major": 2, "version_minor": 0}</script><div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 1_000 tune and 5_000 draw iterations (4_000 + 20_000 draws total) took 8 seconds.
+Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [Slope, Intercept, sigma]
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "920cf56f67294c018e9c0d2322c5fd6d", "version_major": 2, "version_minor": 0}</script><div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 1_000 tune and 5_000 draw iterations (4_000 + 20_000 draws total) took 8 seconds.
+Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [Slope, Intercept, sigma]
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "002685a7a54749c6aca458ae8b84722b", "version_major": 2, "version_minor": 0}</script><div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 1_000 tune and 5_000 draw iterations (4_000 + 20_000 draws total) took 8 seconds.
+There were 1 divergences after tuning. Increase `target_accept` or reparameterize.
+Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [Slope, Intercept, sigma]
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "66beb285e586482296917fbd825a00c7", "version_major": 2, "version_minor": 0}</script><div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 1_000 tune and 5_000 draw iterations (4_000 + 20_000 draws total) took 7 seconds.
+There were 751 divergences after tuning. Increase `target_accept` or reparameterize.
+The rhat statistic is larger than 1.01 for some parameters. This indicates problems during sampling. See https://arxiv.org/abs/1903.08008 for details
+Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [Slope, Intercept, sigma]
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "c3b358658ed942c49b8a44b541d74483", "version_major": 2, "version_minor": 0}</script><div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 1_000 tune and 5_000 draw iterations (4_000 + 20_000 draws total) took 9 seconds.
+There were 305 divergences after tuning. Increase `target_accept` or reparameterize.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that the model has a hard time to converge (as seen in the number of divergences) as the number of samples diminishes, suggesting that the priors may be too specific. This should be your first clue to change the priors.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="c1"># Calculate the number of observations in each trial</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="p">[</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">df_calib</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">opt</span><span class="p">]</span>
+
+<span class="c1"># Create a list of string that gives the value of the coefficient and associated error </span>
+<span class="n">freq_slope</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> +/- </span><span class="si">{</span><span class="n">u</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">slope</span><span class="p">,</span> <span class="n">slope_u</span><span class="p">)]</span>
+<span class="n">freq_intercept</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> +/- </span><span class="si">{</span><span class="n">u</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">intercept</span><span class="p">,</span> <span class="n">intercept_u</span><span class="p">)]</span>
+<span class="n">bay_slope</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> +/- </span><span class="si">{</span><span class="n">u</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">slope_b</span><span class="p">,</span> <span class="n">slope_b_u</span><span class="p">)]</span>
+<span class="n">bay_intercept</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> +/- </span><span class="si">{</span><span class="n">u</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">intercept_b</span><span class="p">,</span> <span class="n">intercept_b_u</span><span class="p">)]</span>
+
+<span class="c1"># Make a dataframe to use with great tables</span>
+
+<span class="n">df_res</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Number of points&#39;</span><span class="p">:</span><span class="n">obs</span><span class="p">,</span>
+                       <span class="s1">&#39;fs&#39;</span><span class="p">:</span> <span class="n">freq_slope</span><span class="p">,</span>
+                       <span class="s1">&#39;fi&#39;</span><span class="p">:</span> <span class="n">freq_intercept</span><span class="p">,</span>
+                       <span class="s1">&#39;bs&#39;</span><span class="p">:</span> <span class="n">bay_slope</span><span class="p">,</span>
+                       <span class="s1">&#39;bi&#39;</span><span class="p">:</span> <span class="n">bay_intercept</span><span class="p">,</span>
+                      <span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gt_tbl_wls</span> <span class="o">=</span> <span class="p">(</span><span class="n">GT</span><span class="p">(</span><span class="n">df_res</span><span class="p">)</span>
+          <span class="o">.</span><span class="n">tab_spanner</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">md</span><span class="p">(</span><span class="s2">&quot;Frequentist Approach&quot;</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;fs&quot;</span><span class="p">,</span> <span class="s2">&quot;fi&quot;</span><span class="p">])</span> 
+          <span class="o">.</span><span class="n">tab_spanner</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">md</span><span class="p">(</span><span class="s2">&quot;Bayesian Approach&quot;</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;bs&quot;</span><span class="p">,</span> <span class="s2">&quot;bi&quot;</span><span class="p">])</span>
+          <span class="o">.</span><span class="n">cols_label</span><span class="p">(</span><span class="n">fs</span><span class="o">=</span><span class="s2">&quot;Slope&quot;</span><span class="p">,</span> <span class="n">fi</span><span class="o">=</span><span class="s2">&quot;Intercept&quot;</span><span class="p">,</span> <span class="n">bs</span><span class="o">=</span><span class="s2">&quot;Slope&quot;</span><span class="p">,</span> <span class="n">bi</span><span class="o">=</span><span class="s2">&quot;Intercept&quot;</span><span class="p">)</span>    
+          <span class="o">.</span><span class="n">tab_header</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">html</span><span class="p">(</span><span class="s1">&#39;Calibration of &lt;em&gt;Siderastrea sidera&lt;/em&gt; Sr/Ca to SST, frequentist vs Bayesian approach&#39;</span><span class="p">))</span>
+          <span class="o">.</span><span class="n">tab_options</span><span class="p">(</span><span class="n">column_labels_background_color</span><span class="o">=</span><span class="s2">&quot;darkgrey&quot;</span><span class="p">,</span><span class="n">source_notes_background_color</span><span class="o">=</span><span class="s2">&quot;OldLace&quot;</span><span class="p">)</span>
+         <span class="p">)</span>  
+<span class="n">gt_tbl_wls</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div id="ialqnzecqe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>
+#ialqnzecqe table {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+#ialqnzecqe thead, tbody, tfoot, tr, td, th { border-style: none; }
+ tr { background-color: transparent; }
+#ialqnzecqe p { margin: 0; padding: 0; }
+ #ialqnzecqe .gt_table { display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; }
+ #ialqnzecqe .gt_caption { padding-top: 4px; padding-bottom: 4px; }
+ #ialqnzecqe .gt_title { color: #333333; font-size: 125%; font-weight: initial; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; border-bottom-color: #FFFFFF; border-bottom-width: 0; }
+ #ialqnzecqe .gt_subtitle { color: #333333; font-size: 85%; font-weight: initial; padding-top: 3px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; border-top-color: #FFFFFF; border-top-width: 0; }
+ #ialqnzecqe .gt_heading { background-color: #FFFFFF; text-align: center; border-bottom-color: #FFFFFF; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
+ #ialqnzecqe .gt_bottom_border { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
+ #ialqnzecqe .gt_col_headings { border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
+ #ialqnzecqe .gt_col_heading { color: #333333; background-color: darkgrey; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; }
+ #ialqnzecqe .gt_column_spanner_outer { color: #333333; background-color: darkgrey; font-size: 100%; font-weight: normal; text-transform: inherit; padding-top: 0; padding-bottom: 0; padding-left: 4px; padding-right: 4px; }
+ #ialqnzecqe .gt_column_spanner_outer:first-child { padding-left: 0; }
+ #ialqnzecqe .gt_column_spanner_outer:last-child { padding-right: 0; }
+ #ialqnzecqe .gt_column_spanner { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 5px; overflow-x: hidden; display: inline-block; width: 100%; }
+ #ialqnzecqe .gt_spanner_row { border-bottom-style: hidden; }
+ #ialqnzecqe .gt_group_heading { padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; text-align: left; }
+ #ialqnzecqe .gt_empty_group_heading { padding: 0.5px; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; vertical-align: middle; }
+ #ialqnzecqe .gt_from_md> :first-child { margin-top: 0; }
+ #ialqnzecqe .gt_from_md> :last-child { margin-bottom: 0; }
+ #ialqnzecqe .gt_row { padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; }
+ #ialqnzecqe .gt_stub { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; }
+ #ialqnzecqe .gt_stub_row_group { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; vertical-align: top; }
+ #ialqnzecqe .gt_row_group_first td { border-top-width: 2px; }
+ #ialqnzecqe .gt_row_group_first th { border-top-width: 2px; }
+ #ialqnzecqe .gt_striped { background-color: rgba(128,128,128,0.05); }
+ #ialqnzecqe .gt_table_body { border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
+ #ialqnzecqe .gt_sourcenotes { color: #333333; background-color: OldLace; border-bottom-style: none; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; }
+ #ialqnzecqe .gt_sourcenote { font-size: 90%; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; text-align: left; }
+ #ialqnzecqe .gt_left { text-align: left; }
+ #ialqnzecqe .gt_center { text-align: center; }
+ #ialqnzecqe .gt_right { text-align: right; font-variant-numeric: tabular-nums; }
+ #ialqnzecqe .gt_font_normal { font-weight: normal; }
+ #ialqnzecqe .gt_font_bold { font-weight: bold; }
+ #ialqnzecqe .gt_font_italic { font-style: italic; }
+ #ialqnzecqe .gt_super { font-size: 65%; }
+ #ialqnzecqe .gt_footnote_marks { font-size: 75%; vertical-align: 0.4em; position: initial; }
+ #ialqnzecqe .gt_asterisk { font-size: 100%; vertical-align: 0; }
+ 
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+
+  <tr class="gt_heading">
+    <td colspan="5" class="gt_heading gt_title gt_font_normal">Calibration of <em>Siderastrea sidera</em> Sr/Ca to SST, frequentist vs Bayesian approach</td>
+  </tr>
+<tr class="gt_col_headings gt_spanner_row">
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" scope="col" id="Number of points">Number of points</th>
+  <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Frequentist Approach">
+    <span class="gt_column_spanner">Frequentist Approach</span>
+  </th>
+  <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Bayesian Approach">
+    <span class="gt_column_spanner">Bayesian Approach</span>
+  </th>
+</tr>
+<tr class="gt_col_headings">
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Slope">Slope</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Intercept">Intercept</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Slope">Slope</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Intercept">Intercept</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+  <tr>
+    <td class="gt_row gt_right">168</td>
+    <td class="gt_row gt_right">-0.043 +/- 0.001</td>
+    <td class="gt_row gt_right">10.115 +/- 0.025</td>
+    <td class="gt_row gt_right">-0.043 +/- 0.001</td>
+    <td class="gt_row gt_right">10.113 +/- 0.025</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_right">101</td>
+    <td class="gt_row gt_right">-0.043 +/- 0.001</td>
+    <td class="gt_row gt_right">10.099 +/- 0.032</td>
+    <td class="gt_row gt_right">-0.043 +/- 0.001</td>
+    <td class="gt_row gt_right">10.095 +/- 0.031</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_right">68</td>
+    <td class="gt_row gt_right">-0.041 +/- 0.001</td>
+    <td class="gt_row gt_right">10.059 +/- 0.038</td>
+    <td class="gt_row gt_right">-0.041 +/- 0.001</td>
+    <td class="gt_row gt_right">10.058 +/- 0.038</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_right">34</td>
+    <td class="gt_row gt_right">-0.045 +/- 0.002</td>
+    <td class="gt_row gt_right">10.163 +/- 0.060</td>
+    <td class="gt_row gt_right">-0.044 +/- 0.002</td>
+    <td class="gt_row gt_right">10.144 +/- 0.058</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_right">17</td>
+    <td class="gt_row gt_right">-0.048 +/- 0.003</td>
+    <td class="gt_row gt_right">10.240 +/- 0.069</td>
+    <td class="gt_row gt_right">-0.046 +/- 0.003</td>
+    <td class="gt_row gt_right">10.195 +/- 0.070</td>
+  </tr>
+  <tr>
+    <td class="gt_row gt_right">9</td>
+    <td class="gt_row gt_right">-0.044 +/- 0.003</td>
+    <td class="gt_row gt_right">10.110 +/- 0.077</td>
+    <td class="gt_row gt_right">-0.043 +/- 0.003</td>
+    <td class="gt_row gt_right">10.086 +/- 0.079</td>
+  </tr>
+</tbody>
+
+
+</table>
+
+</div>
+        </div></div>
+</div>
+<p>The Bayesian and frequentist approaches give very similar results despite the divergences. As the number of samples decreases, the Bayesian approach stays slightly closer to the prior values.</p>
+</section>
+</section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <p>DeLong, K.L., J.A. Flannery, C.R. Maupin, R.Z. Poore, and T.M. Quinn. 2011. A coral Sr/Ca calibration and replication study of two massive corals from the Gulf of Mexico. Palaeogeography, Palaeoclimatology, Palaeoecology, 307(1-4), 117-128. doi: 10.1016/j.palaeo.2011.05.005</p>
+<p>DeLong, K. L., J. A. Flannery, R. Z. Poore, T. M. Quinn, C. R. Maupin, K. Lin, and C.-C. Shen (2014), A reconstruction of sea surface temperature variability in the southeastern Gulf of Mexico from 1734 to 2008 C.E. using cross-dated Sr/Ca records from the coral Siderastrea siderea, Paleoceanography, 29, 403–422, doi:10.1002/2013PA002524.</p>
+<p>Khider, D., C. S. Jackson, and L. D. Stott (2014), Assessing millennial-scale variability during the Holocene: A perspective from the western tropical Pacific, Paleoceanography, 29, 143–159, doi:10.1002/2013PA002534.</p>
+<p>Maupin, C. R., T. M. Quinn, and R. B. Halley (2008), Extracting a climate signal from the skeletal geochemistry of the Caribbean coral Siderastrea siderea, Geochem. Geophys. Geosyst., 9, Q12012, doi:10.1029/2008GC002106.</p>
+<p>PAGES2k Consortium. A global multiproxy database for temperature reconstructions of the Common Era. Sci Data 4, 170088 (2017). <a class="reference external" href="https://doi.org/10.1038/sdata.2017.88">https://doi.org/10.1038/sdata.2017.88</a></p>
 </section>
 </section>
 
@@ -875,7 +1396,7 @@ Intercept Standard Deviation: 0.028
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Calibration.html"
+       href="FrequentistCalibration.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
@@ -890,7 +1411,8 @@ Intercept Standard Deviation: 0.028
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -900,19 +1422,7 @@ Intercept Standard Deviation: 0.028
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authors">Authors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble">Preamble</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concept-in-probability">Concept in probability</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-probability">Marginal Probability</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-probability">Conditional Probability</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#joint-probability">Joint Probability</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-theorem">Bayes’ theorem</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-theorem-and-linear-regression">Bayes’ theorem and linear regression</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble">Preamble</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">Loading the data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#siderastrea-sidera-core-a1"><em>Siderastrea sidera</em> - core A1</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-the-model">Estimating the model</a></li>
@@ -922,6 +1432,11 @@ Intercept Standard Deviation: 0.028
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#montastraea-faveolata"><em>Montastraea faveolata</em></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Estimating the model</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Analyzing the model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-the-bayesian-framework">Why use the Bayesian framework?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-of-uncertainty-using-bayesian-posteriors">Estimation of uncertainty using Bayesian posteriors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bayesian-pitfall-encoding-priors">Bayesian pitfall: encoding priors</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
@@ -973,8 +1488,8 @@ By Deborah Khider
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>
