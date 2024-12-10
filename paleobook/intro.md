@@ -21,7 +21,7 @@ This Jupyter Book covers the calibration of coral Sr/Ca to sea surface temperatu
 
 This Book is broken down into three chapters:
 - Data exploration of the Sr/Ca data from three cores and nearby sea surface temperature data
-- Calibration using ordinary and weighted least square regression
+- Frequentist calibration using ordinary and weighted least square regression
 - Bayesian calibration presents a Bayesian alternative to OLS.
 
 ## Data Reference

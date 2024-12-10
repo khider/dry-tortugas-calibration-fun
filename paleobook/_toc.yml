@@ -9,5 +9,5 @@ parts:
       - file: DataExploration.ipynb
   - caption: Calibration
     chapters:
-      - file: Calibration.ipynb
+      - file: FrequentistCalibration.ipynb
       - file: BayesianCalibration.ipynb
