@@ -1,4 +1,4 @@
-shortname: calibration
+shortname: Coral Sr/Ca calibration
 type: Paleobook
 thumbnail: coral_logo.jpg
 parts:
@@ -17,10 +17,10 @@ parts:
             - matplotlib
             - pyleoclim
             - pandas
-  - caption: Science Bits - Calibration
+  - caption: Calibration
     chapters:
-      - shortname: Calibration - OLS
-        filename: Calibration
+      - shortname: Frequentist Calibration
+        filename: FrequentistCalibration
         thumbnail: table.png
         tags:
           domains:
