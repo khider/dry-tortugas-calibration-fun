@@ -11,7 +11,7 @@ This Jupyter Book covers the calibration of coral Sr/Ca to sea surface temperatu
 
 [Deborah Khider](https://github.com/khider)
 
-## Contributor
+## Contributors
 
 <a href="https://github.com/khider/dry-tortugas-calibration-fun/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=khider/dry-tortugas-calibration-fun" />
