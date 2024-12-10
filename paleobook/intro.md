@@ -1,6 +1,6 @@
 [![PyPI](https://img.shields.io/badge/python-3.11-yellow.svg)]()
 [![license](https://img.shields.io/github/license/khider/dry-tortugas-calibration-fun.svg)]()
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13699185.svg)](https://doi.org/10.5281/zenodo.13699185)
 
 # Coral Sr/Ca calibration - An example from Dry Tortugas
 
